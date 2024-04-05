@@ -1,0 +1,786 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`fixtures > should parse a simple ruby code 1`] = `
+"{
+  "typeName": "Begin",
+  "statements": [
+    {
+      "typeName": "Class",
+      "name": {
+        "typeName": "Const",
+        "scope": {
+          "typeName": "Const",
+          "name": "A",
+          "nameL": {
+            "begin": 6,
+            "end": 7
+          },
+          "expressionL": {
+            "begin": 6,
+            "end": 7
+          }
+        },
+        "name": "B",
+        "doubleColonL": {
+          "begin": 7,
+          "end": 9
+        },
+        "nameL": {
+          "begin": 9,
+          "end": 10
+        },
+        "expressionL": {
+          "begin": 6,
+          "end": 10
+        }
+      },
+      "superclass": {
+        "typeName": "Const",
+        "scope": {
+          "typeName": "Cbase",
+          "expressionL": {
+            "begin": 13,
+            "end": 15
+          }
+        },
+        "name": "C",
+        "doubleColonL": {
+          "begin": 13,
+          "end": 15
+        },
+        "nameL": {
+          "begin": 15,
+          "end": 16
+        },
+        "expressionL": {
+          "begin": 13,
+          "end": 16
+        }
+      },
+      "body": {
+        "typeName": "Begin",
+        "statements": [
+          {
+            "typeName": "Alias",
+            "to": {
+              "typeName": "Sym",
+              "name": {
+                "raw": [
+                  102,
+                  111,
+                  111
+                ]
+              },
+              "expressionL": {
+                "begin": 25,
+                "end": 28
+              }
+            },
+            "from": {
+              "typeName": "Sym",
+              "name": {
+                "raw": [
+                  98,
+                  97,
+                  114
+                ]
+              },
+              "expressionL": {
+                "begin": 29,
+                "end": 32
+              }
+            },
+            "keywordL": {
+              "begin": 19,
+              "end": 24
+            },
+            "expressionL": {
+              "begin": 19,
+              "end": 32
+            }
+          },
+          {
+            "typeName": "Undef",
+            "names": [
+              {
+                "typeName": "Sym",
+                "name": {
+                  "raw": [
+                    102,
+                    111,
+                    111
+                  ]
+                },
+                "expressionL": {
+                  "begin": 41,
+                  "end": 44
+                }
+              }
+            ],
+            "keywordL": {
+              "begin": 35,
+              "end": 40
+            },
+            "expressionL": {
+              "begin": 35,
+              "end": 44
+            }
+          },
+          {
+            "typeName": "Def",
+            "name": "m",
+            "args": {
+              "typeName": "Args",
+              "args": [
+                {
+                  "typeName": "Arg",
+                  "name": "a",
+                  "expressionL": {
+                    "begin": 54,
+                    "end": 55
+                  }
+                },
+                {
+                  "typeName": "Mlhs",
+                  "items": [
+                    {
+                      "typeName": "Arg",
+                      "name": "foo",
+                      "expressionL": {
+                        "begin": 58,
+                        "end": 61
+                      }
+                    }
+                  ],
+                  "beginL": {
+                    "begin": 57,
+                    "end": 58
+                  },
+                  "endL": {
+                    "begin": 61,
+                    "end": 62
+                  },
+                  "expressionL": {
+                    "begin": 57,
+                    "end": 62
+                  }
+                },
+                {
+                  "typeName": "Optarg",
+                  "name": "b",
+                  "default": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 68,
+                      "end": 71
+                    }
+                  },
+                  "nameL": {
+                    "begin": 64,
+                    "end": 65
+                  },
+                  "operatorL": {
+                    "begin": 66,
+                    "end": 67
+                  },
+                  "expressionL": {
+                    "begin": 64,
+                    "end": 71
+                  }
+                },
+                {
+                  "typeName": "Restarg",
+                  "name": "c",
+                  "operatorL": {
+                    "begin": 73,
+                    "end": 74
+                  },
+                  "nameL": {
+                    "begin": 74,
+                    "end": 75
+                  },
+                  "expressionL": {
+                    "begin": 73,
+                    "end": 75
+                  }
+                },
+                {
+                  "typeName": "Kwarg",
+                  "name": "d",
+                  "nameL": {
+                    "begin": 77,
+                    "end": 78
+                  },
+                  "expressionL": {
+                    "begin": 77,
+                    "end": 79
+                  }
+                },
+                {
+                  "typeName": "Kwoptarg",
+                  "name": "e",
+                  "default": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 84,
+                      "end": 87
+                    }
+                  },
+                  "nameL": {
+                    "begin": 81,
+                    "end": 82
+                  },
+                  "expressionL": {
+                    "begin": 81,
+                    "end": 87
+                  }
+                },
+                {
+                  "typeName": "Kwrestarg",
+                  "name": "f",
+                  "operatorL": {
+                    "begin": 89,
+                    "end": 91
+                  },
+                  "nameL": {
+                    "begin": 91,
+                    "end": 92
+                  },
+                  "expressionL": {
+                    "begin": 89,
+                    "end": 92
+                  }
+                },
+                {
+                  "typeName": "Blockarg",
+                  "name": "g",
+                  "operatorL": {
+                    "begin": 94,
+                    "end": 95
+                  },
+                  "nameL": {
+                    "begin": 95,
+                    "end": 96
+                  },
+                  "expressionL": {
+                    "begin": 94,
+                    "end": 96
+                  }
+                }
+              ],
+              "expressionL": {
+                "begin": 53,
+                "end": 97
+              },
+              "beginL": {
+                "begin": 53,
+                "end": 54
+              },
+              "endL": {
+                "begin": 96,
+                "end": 97
+              }
+            },
+            "keywordL": {
+              "begin": 48,
+              "end": 51
+            },
+            "nameL": {
+              "begin": 52,
+              "end": 53
+            },
+            "endL": {
+              "begin": 2409,
+              "end": 2412
+            },
+            "expressionL": {
+              "begin": 48,
+              "end": 2412
+            }
+          },
+          {
+            "typeName": "Defs",
+            "definee": {
+              "typeName": "RubySelf",
+              "expressionL": {
+                "begin": 2420,
+                "end": 2424
+              }
+            },
+            "name": "foo",
+            "keywordL": {
+              "begin": 2416,
+              "end": 2419
+            },
+            "operatorL": {
+              "begin": 2424,
+              "end": 2425
+            },
+            "nameL": {
+              "begin": 2425,
+              "end": 2428
+            },
+            "endL": {
+              "begin": 2431,
+              "end": 2434
+            },
+            "expressionL": {
+              "begin": 2416,
+              "end": 2434
+            }
+          },
+          {
+            "typeName": "Def",
+            "name": "m",
+            "args": {
+              "typeName": "Args",
+              "args": [],
+              "expressionL": {
+                "begin": 2443,
+                "end": 2445
+              },
+              "beginL": {
+                "begin": 2443,
+                "end": 2444
+              },
+              "endL": {
+                "begin": 2444,
+                "end": 2445
+              }
+            },
+            "keywordL": {
+              "begin": 2438,
+              "end": 2441
+            },
+            "nameL": {
+              "begin": 2442,
+              "end": 2443
+            },
+            "assignmentL": {
+              "begin": 2446,
+              "end": 2447
+            },
+            "expressionL": {
+              "begin": 2438,
+              "end": 2450
+            }
+          },
+          {
+            "typeName": "Defs",
+            "definee": {
+              "typeName": "RubySelf",
+              "expressionL": {
+                "begin": 2457,
+                "end": 2461
+              }
+            },
+            "name": "m",
+            "args": {
+              "typeName": "Args",
+              "args": [],
+              "expressionL": {
+                "begin": 2463,
+                "end": 2465
+              },
+              "beginL": {
+                "begin": 2463,
+                "end": 2464
+              },
+              "endL": {
+                "begin": 2464,
+                "end": 2465
+              }
+            },
+            "body": {
+              "typeName": "Int",
+              "value": "42",
+              "expressionL": {
+                "begin": 2468,
+                "end": 2470
+              }
+            },
+            "keywordL": {
+              "begin": 2453,
+              "end": 2456
+            },
+            "operatorL": {
+              "begin": 2461,
+              "end": 2462
+            },
+            "nameL": {
+              "begin": 2462,
+              "end": 2463
+            },
+            "assignmentL": {
+              "begin": 2466,
+              "end": 2467
+            },
+            "expressionL": {
+              "begin": 2453,
+              "end": 2470
+            }
+          },
+          {
+            "typeName": "Module",
+            "name": {
+              "typeName": "Const",
+              "name": "M",
+              "nameL": {
+                "begin": 2481,
+                "end": 2482
+              },
+              "expressionL": {
+                "begin": 2481,
+                "end": 2482
+              }
+            },
+            "body": {
+              "typeName": "SClass",
+              "expr": {
+                "typeName": "RubySelf",
+                "expressionL": {
+                  "begin": 2498,
+                  "end": 2502
+                }
+              },
+              "body": {
+                "typeName": "Send",
+                "methodName": "foo",
+                "args": [],
+                "selectorL": {
+                  "begin": 2513,
+                  "end": 2516
+                },
+                "expressionL": {
+                  "begin": 2513,
+                  "end": 2516
+                }
+              },
+              "keywordL": {
+                "begin": 2489,
+                "end": 2494
+              },
+              "operatorL": {
+                "begin": 2495,
+                "end": 2497
+              },
+              "endL": {
+                "begin": 2523,
+                "end": 2526
+              },
+              "expressionL": {
+                "begin": 2489,
+                "end": 2526
+              }
+            },
+            "keywordL": {
+              "begin": 2474,
+              "end": 2480
+            },
+            "endL": {
+              "begin": 2529,
+              "end": 2532
+            },
+            "expressionL": {
+              "begin": 2474,
+              "end": 2532
+            }
+          },
+          {
+            "typeName": "Casgn",
+            "scope": {
+              "typeName": "Cbase",
+              "expressionL": {
+                "begin": 2536,
+                "end": 2538
+              }
+            },
+            "name": "A",
+            "value": {
+              "typeName": "Int",
+              "value": "1",
+              "expressionL": {
+                "begin": 2542,
+                "end": 2543
+              }
+            },
+            "doubleColonL": {
+              "begin": 2536,
+              "end": 2538
+            },
+            "nameL": {
+              "begin": 2538,
+              "end": 2539
+            },
+            "operatorL": {
+              "begin": 2540,
+              "end": 2541
+            },
+            "expressionL": {
+              "begin": 2536,
+              "end": 2543
+            }
+          },
+          {
+            "typeName": "Casgn",
+            "scope": {
+              "typeName": "Const",
+              "scope": {
+                "typeName": "Cbase",
+                "expressionL": {
+                  "begin": 2546,
+                  "end": 2548
+                }
+              },
+              "name": "A",
+              "doubleColonL": {
+                "begin": 2546,
+                "end": 2548
+              },
+              "nameL": {
+                "begin": 2548,
+                "end": 2549
+              },
+              "expressionL": {
+                "begin": 2546,
+                "end": 2549
+              }
+            },
+            "name": "B",
+            "value": {
+              "typeName": "Int",
+              "value": "1",
+              "expressionL": {
+                "begin": 2555,
+                "end": 2556
+              }
+            },
+            "doubleColonL": {
+              "begin": 2549,
+              "end": 2551
+            },
+            "nameL": {
+              "begin": 2551,
+              "end": 2552
+            },
+            "operatorL": {
+              "begin": 2553,
+              "end": 2554
+            },
+            "expressionL": {
+              "begin": 2546,
+              "end": 2556
+            }
+          },
+          {
+            "typeName": "Casgn",
+            "name": "A",
+            "value": {
+              "typeName": "Int",
+              "value": "1",
+              "expressionL": {
+                "begin": 2563,
+                "end": 2564
+              }
+            },
+            "nameL": {
+              "begin": 2559,
+              "end": 2560
+            },
+            "operatorL": {
+              "begin": 2561,
+              "end": 2562
+            },
+            "expressionL": {
+              "begin": 2559,
+              "end": 2564
+            }
+          },
+          {
+            "typeName": "Def",
+            "name": "foo",
+            "args": {
+              "typeName": "Args",
+              "args": [
+                {
+                  "typeName": "ForwardArg",
+                  "expressionL": {
+                    "begin": 2576,
+                    "end": 2579
+                  }
+                }
+              ],
+              "expressionL": {
+                "begin": 2575,
+                "end": 2580
+              },
+              "beginL": {
+                "begin": 2575,
+                "end": 2576
+              },
+              "endL": {
+                "begin": 2579,
+                "end": 2580
+              }
+            },
+            "keywordL": {
+              "begin": 2568,
+              "end": 2571
+            },
+            "nameL": {
+              "begin": 2572,
+              "end": 2575
+            },
+            "endL": {
+              "begin": 2598,
+              "end": 2601
+            },
+            "expressionL": {
+              "begin": 2568,
+              "end": 2601
+            }
+          },
+          {
+            "typeName": "Def",
+            "name": "foo",
+            "args": {
+              "typeName": "Args",
+              "args": [
+                {
+                  "typeName": "Kwnilarg",
+                  "nameL": {
+                    "begin": 2615,
+                    "end": 2618
+                  },
+                  "expressionL": {
+                    "begin": 2613,
+                    "end": 2618
+                  }
+                }
+              ],
+              "expressionL": {
+                "begin": 2612,
+                "end": 2619
+              },
+              "beginL": {
+                "begin": 2612,
+                "end": 2613
+              },
+              "endL": {
+                "begin": 2618,
+                "end": 2619
+              }
+            },
+            "keywordL": {
+              "begin": 2605,
+              "end": 2608
+            },
+            "nameL": {
+              "begin": 2609,
+              "end": 2612
+            },
+            "endL": {
+              "begin": 2622,
+              "end": 2625
+            },
+            "expressionL": {
+              "begin": 2605,
+              "end": 2625
+            }
+          }
+        ],
+        "expressionL": {
+          "begin": 19,
+          "end": 2625
+        }
+      },
+      "keywordL": {
+        "begin": 0,
+        "end": 5
+      },
+      "operatorL": {
+        "begin": 11,
+        "end": 12
+      },
+      "endL": {
+        "begin": 2626,
+        "end": 2629
+      },
+      "expressionL": {
+        "begin": 0,
+        "end": 2629
+      }
+    },
+    {
+      "typeName": "Preexe",
+      "body": {
+        "typeName": "Send",
+        "methodName": "foo",
+        "args": [],
+        "selectorL": {
+          "begin": 2639,
+          "end": 2642
+        },
+        "expressionL": {
+          "begin": 2639,
+          "end": 2642
+        }
+      },
+      "keywordL": {
+        "begin": 2631,
+        "end": 2636
+      },
+      "beginL": {
+        "begin": 2637,
+        "end": 2638
+      },
+      "endL": {
+        "begin": 2643,
+        "end": 2644
+      },
+      "expressionL": {
+        "begin": 2631,
+        "end": 2644
+      }
+    },
+    {
+      "typeName": "Postexe",
+      "body": {
+        "typeName": "Send",
+        "methodName": "foo",
+        "args": [],
+        "selectorL": {
+          "begin": 2651,
+          "end": 2654
+        },
+        "expressionL": {
+          "begin": 2651,
+          "end": 2654
+        }
+      },
+      "keywordL": {
+        "begin": 2645,
+        "end": 2648
+      },
+      "beginL": {
+        "begin": 2649,
+        "end": 2650
+      },
+      "endL": {
+        "begin": 2655,
+        "end": 2656
+      },
+      "expressionL": {
+        "begin": 2645,
+        "end": 2656
+      }
+    }
+  ],
+  "expressionL": {
+    "begin": 0,
+    "end": 2656
+  }
+}"
+`;

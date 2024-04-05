@@ -1,0 +1,129 @@
+## ruby-parser
+`ruby-parser` is a Ruby parser for Node.js written in Rust.
+
+## Supported nodes
+
+- [x] Alias
+- [ ] And
+- [x] AndAsgn
+- [x] Arg
+- [x] Args
+- [ ] Array
+- [ ] ArrayPattern
+- [ ] ArrayPatternWithTail
+- [ ] BackRef
+- [x] Begin
+- [ ] Block
+- [x] Blockarg
+- [ ] BlockPass
+- [ ] Break
+- [ ] Case
+- [ ] CaseMatch
+- [x] Casgn
+- [x] Cbase
+- [x] Class
+- [ ] Complex
+- [x] Const
+- [ ] ConstPattern
+- [ ] CSend
+- [ ] Cvar
+- [ ] Cvasgn
+- [x] Def
+- [ ] Defined
+- [x] Defs
+- [ ] Dstr
+- [ ] Dsym
+- [ ] EFlipFlop
+- [ ] EmptyElse
+- [x] Encoding
+- [ ] Ensure
+- [ ] Erange
+- [x] False
+- [x] File
+- [ ] FindPattern
+- [ ] Float
+- [ ] For
+- [x] ForwardArg
+- [ ] ForwardedArgs
+- [ ] Gvar
+- [ ] Gvasgn
+- [ ] Hash
+- [ ] HashPattern
+- [ ] Heredoc
+- [ ] If
+- [ ] IfGuard
+- [ ] IFlipFlop
+- [ ] IfMod
+- [ ] IfTernary
+- [ ] Index
+- [ ] IndexAsgn
+- [ ] InPattern
+- [ ] Int
+- [ ] Irange
+- [ ] Ivar
+- [ ] Ivasgn
+- [x] Kwarg
+- [ ] Kwargs
+- [ ] KwBegin
+- [x] Kwnilarg
+- [x] Kwoptarg
+- [ ] Kwrestarg
+- [ ] Kwsplat
+- [ ] Lambda
+- [x] Line
+- [x] Lvar
+- [ ] Lvasgn
+- [ ] Masgn
+- [ ] MatchAlt
+- [ ] MatchAs
+- [ ] MatchCurrentLine
+- [ ] MatchNilPattern
+- [ ] MatchPattern
+- [ ] MatchPatternP
+- [ ] MatchRest
+- [ ] MatchVar
+- [ ] MatchWithLvasgn
+- [x] Mlhs
+- [x] Module
+- [ ] Next
+- [x] Nil
+- [ ] NthRef
+- [ ] Numblock
+- [ ] OpAsgn
+- [x] Optarg
+- [ ] Or
+- [ ] OrAsgn
+- [ ] Pair
+- [ ] Pin
+- [x] Postexe
+- [x] Preexe
+- [ ] Procarg0
+- [ ] Rational
+- [ ] Redo
+- [ ] Regexp
+- [ ] RegOpt
+- [ ] Rescue
+- [ ] RescueBody
+- [x] Restarg
+- [ ] Retry
+- [ ] Return
+- [x] SClass
+- [x] Self_
+- [x] Send
+- [ ] Shadowarg
+- [ ] Splat
+- [x] Str
+- [ ] Super
+- [x] Sym
+- [x] True
+- [x] Undef
+- [ ] UnlessGuard
+- [ ] Until
+- [ ] UntilPost
+- [ ] When
+- [ ] While
+- [ ] WhilePost
+- [ ] XHeredoc
+- [ ] Xstr
+- [ ] Yield
+- [ ] ZSuper

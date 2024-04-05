@@ -1,0 +1,32 @@
+{
+  "name": "ruby-parser",
+  "version": "0.0.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "napi": {
+    "name": "ruby-parser",
+    "triples": {}
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@napi-rs/cli": "^2.18.0",
+    "@types/node": "^20.12.3",
+    "typescript": "^5.4.4",
+    "vite": "^5.2.7",
+    "vitest": "^1.4.0"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "build": "napi build --platform --release && npx vite-node insertTypeAlias.ts",
+    "build:debug": "napi build --platform && npx vite-node insertTypeAlias.ts",
+    "prepublishOnly": "napi prepublish -t npm",
+    "test": "vitest",
+    "universal": "napi universal",
+    "version": "napi version",
+    "typecheck": "tsc --noEmit"
+  },
+  "packageManager": "yarn@4.1.1"
+}
