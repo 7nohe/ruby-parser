@@ -5,9 +5,9 @@
   "author": "Daiki Urata",
   "homepage": "https://github.com/7nohe/ruby-parser",
   "repository": {
-		"type": "git",
-		"url": "git+https://github.com/7nohe/ruby-parser.git"
-	},
+    "type": "git",
+    "url": "git+https://github.com/7nohe/ruby-parser.git"
+  },
   "bugs": "https://github.com/7nohe/ruby-parser/issues",
   "keywords": [
     "ruby",

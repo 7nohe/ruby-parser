@@ -1,6 +1,6 @@
 {
   "name": "ruby-parser-linux-x64-gnu",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "os": [
     "linux"
   ],
@@ -11,10 +11,24 @@
   "files": [
     "ruby-parser.linux-x64-gnu.node"
   ],
+  "description": "Ruby parser for Node.js",
+  "keywords": [
+    "ruby",
+    "parser",
+    "nodejs",
+    "ruby-parser"
+  ],
+  "author": "Daiki Urata",
+  "homepage": "https://github.com/7nohe/ruby-parser",
   "license": "MIT",
   "engines": {
     "node": ">= 10"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7nohe/ruby-parser.git"
+  },
+  "bugs": "https://github.com/7nohe/ruby-parser/issues",
   "libc": [
     "glibc"
   ]
