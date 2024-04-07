@@ -5,6 +5,18 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@7nohe/ruby-parser@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@7nohe/ruby-parser@workspace:."
+  dependencies:
+    "@napi-rs/cli": "npm:^2.18.0"
+    "@types/node": "npm:^20.12.3"
+    typescript: "npm:^5.4.4"
+    vite: "npm:^5.2.7"
+    vitest: "npm:^1.4.0"
+  languageName: unknown
+  linkType: soft
+
 "@esbuild/aix-ppc64@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/aix-ppc64@npm:0.20.2"
@@ -1463,18 +1475,6 @@ __metadata:
   checksum: 10c0/bde1fa8893a27422b3f9b34857b75a1ee383ccd89d13d539658909f2204e2c465a7b441e53027c40564d288e8fd2c6608e5e756d259ce28dec13e69c68a43479
   languageName: node
   linkType: hard
-
-"ruby-parser@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "ruby-parser@workspace:."
-  dependencies:
-    "@napi-rs/cli": "npm:^2.18.0"
-    "@types/node": "npm:^20.12.3"
-    typescript: "npm:^5.4.4"
-    vite: "npm:^5.2.7"
-    vitest: "npm:^1.4.0"
-  languageName: unknown
-  linkType: soft
 
 "safer-buffer@npm:>= 2.1.2 < 3.0.0":
   version: 2.1.2
