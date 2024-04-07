@@ -1,6 +1,20 @@
 {
   "name": "ruby-parser",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Ruby parser for Node.js",
+  "author": "Daiki Urata",
+  "homepage": "https://github.com/7nohe/ruby-parser",
+  "repository": {
+		"type": "git",
+		"url": "git+https://github.com/7nohe/ruby-parser.git"
+	},
+  "bugs": "https://github.com/7nohe/ruby-parser/issues",
+  "keywords": [
+    "ruby",
+    "parser",
+    "nodejs",
+    "ruby-parser"
+  ],
   "main": "index.js",
   "types": "index.d.ts",
   "napi": {
