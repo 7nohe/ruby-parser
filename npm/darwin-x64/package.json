@@ -1,5 +1,5 @@
 {
-  "name": "ruby-parser-darwin-x64",
+  "name": "@7nohe/ruby-parser-darwin-x64",
   "version": "0.0.2",
   "os": [
     "darwin"

@@ -1,5 +1,5 @@
 {
-  "name": "ruby-parser",
+  "name": "@7nohe/ruby-parser",
   "version": "0.0.2",
   "description": "Ruby parser for Node.js",
   "author": "Daiki Urata",
