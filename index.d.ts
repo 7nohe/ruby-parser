@@ -5,48 +5,142 @@
 
 export const enum RubyNodeType {
   Alias = 0,
-  AndAsgn = 1,
-  Send = 2,
-  Str = 3,
-  Begin = 4,
-  Class = 5,
-  Const = 6,
-  Cbase = 7,
-  Sym = 8,
-  Undef = 9,
-  Def = 10,
-  Args = 11,
-  Arg = 12,
-  Mlhs = 13,
-  Optarg = 14,
-  Lvar = 15,
-  Restarg = 16,
-  Kwarg = 17,
-  Kwoptarg = 18,
-  Kwrestarg = 19,
-  Blockarg = 20,
-  Defs = 21,
-  RubySelf = 22,
-  Int = 23,
-  Module = 24,
-  SClass = 25,
-  Casgn = 26,
-  ForwardArg = 27,
-  Kwnilarg = 28,
-  Preexe = 29,
-  Postexe = 30,
-  File = 31,
-  Line = 32,
-  Encoding = 33,
-  True = 34,
+  And = 1,
+  AndAsgn = 2,
+  Arg = 3,
+  Args = 4,
+  Array = 5,
+  ArrayPattern = 6,
+  ArrayPatternWithTail = 7,
+  BackRef = 8,
+  Begin = 9,
+  Block = 10,
+  Blockarg = 11,
+  BlockPass = 12,
+  Break = 13,
+  Case = 14,
+  CaseMatch = 15,
+  Casgn = 16,
+  Cbase = 17,
+  Class = 18,
+  Complex = 19,
+  Const = 20,
+  ConstPattern = 21,
+  CSend = 22,
+  Cvar = 23,
+  Cvasgn = 24,
+  Def = 25,
+  Defined = 26,
+  Defs = 27,
+  Dstr = 28,
+  Dsym = 29,
+  EFlipFlop = 30,
+  EmptyElse = 31,
+  Encoding = 32,
+  Ensure = 33,
+  Erange = 34,
   False = 35,
-  Nil = 36
+  File = 36,
+  FindPattern = 37,
+  Float = 38,
+  For = 39,
+  ForwardArg = 40,
+  ForwardedArgs = 41,
+  Gvar = 42,
+  Gvasgn = 43,
+  Hash = 44,
+  HashPattern = 45,
+  Heredoc = 46,
+  If = 47,
+  IfGuard = 48,
+  IFlipFlop = 49,
+  IfMod = 50,
+  IfTernary = 51,
+  Index = 52,
+  IndexAsgn = 53,
+  InPattern = 54,
+  Int = 55,
+  Irange = 56,
+  Ivar = 57,
+  Ivasgn = 58,
+  Kwarg = 59,
+  Kwargs = 60,
+  KwBegin = 61,
+  Kwnilarg = 62,
+  Kwoptarg = 63,
+  Kwrestarg = 64,
+  Kwsplat = 65,
+  Lambda = 66,
+  Line = 67,
+  Lvar = 68,
+  Lvasgn = 69,
+  Masgn = 70,
+  MatchAlt = 71,
+  MatchAs = 72,
+  MatchCurrentLine = 73,
+  MatchNilPattern = 74,
+  MatchPattern = 75,
+  MatchPatternP = 76,
+  MatchRest = 77,
+  MatchVar = 78,
+  MatchWithLvasgn = 79,
+  Mlhs = 80,
+  Module = 81,
+  Next = 82,
+  Nil = 83,
+  NthRef = 84,
+  Numblock = 85,
+  OpAsgn = 86,
+  Optarg = 87,
+  Or = 88,
+  OrAsgn = 89,
+  Pair = 90,
+  Pin = 91,
+  Postexe = 92,
+  Preexe = 93,
+  Procarg0 = 94,
+  Rational = 95,
+  Redo = 96,
+  Regexp = 97,
+  RegOpt = 98,
+  Rescue = 99,
+  RescueBody = 100,
+  Restarg = 101,
+  Retry = 102,
+  Return = 103,
+  SClass = 104,
+  RubySelf = 105,
+  Send = 106,
+  Shadowarg = 107,
+  Splat = 108,
+  Str = 109,
+  Super = 110,
+  Sym = 111,
+  True = 112,
+  Undef = 113,
+  UnlessGuard = 114,
+  Until = 115,
+  UntilPost = 116,
+  When = 117,
+  While = 118,
+  WhilePost = 119,
+  XHeredoc = 120,
+  Xstr = 121,
+  Yield = 122,
+  ZSuper = 123
 }
 export interface Alias {
   typeName: 'Alias'
   to: RubyNode
   from: RubyNode
   keywordL: Loc
+  expressionL: Loc
+}
+export interface And {
+  typeName: 'And'
+  lhs: RubyNode
+  rhs: RubyNode
+  operatorL: Loc
   expressionL: Loc
 }
 export interface AndAsgn {
@@ -56,23 +150,42 @@ export interface AndAsgn {
   operatorL: Loc
   expressionL: Loc
 }
-export interface Send {
-  typeName: 'Send'
-  recv?: RubyNode | undefined
-  methodName: string
-  args: Array<RubyNode>
-  dotL?: Loc
-  selectorL?: Loc
-  beginL?: Loc
-  endL?: Loc
-  operatorL?: Loc
+export interface Arg {
+  typeName: 'Arg'
+  name: string
   expressionL: Loc
 }
-export interface Str {
-  typeName: 'Str'
-  value: Bytes
+export interface Args {
+  typeName: 'Args'
+  args: Array<RubyNode>
+  expressionL: Loc
   beginL?: Loc
   endL?: Loc
+}
+export interface Array {
+  typeName: 'Array'
+  elements: RubyNode[]
+  beginL?: Loc
+  endL?: Loc
+  expressionL: Loc
+}
+export interface ArrayPattern {
+  typeName: 'ArrayPattern'
+  elements: RubyNode[]
+  beginL?: Loc
+  endL?: Loc
+  expressionL: Loc
+}
+export interface ArrayPatternWithTail {
+  typeName: 'ArrayPatternWithTail'
+  elements: RubyNode[]
+  beginL?: Loc
+  endL?: Loc
+  expressionL: Loc
+}
+export interface BackRef {
+  typeName: 'BackRef'
+  name: string
   expressionL: Loc
 }
 export interface Begin {
@@ -80,6 +193,68 @@ export interface Begin {
   statements: RubyNode[]
   beginL?: Loc
   endL?: Loc
+  expressionL: Loc
+}
+export interface Block {
+  typeName: 'Block'
+  call: RubyNode
+  args?: RubyNode | undefined
+  body?: RubyNode | undefined
+  beginL: Loc
+  endL: Loc
+  expressionL: Loc
+}
+export interface Blockarg {
+  typeName: 'Blockarg'
+  name?: string
+  operatorL: Loc
+  nameL?: Loc
+  expressionL: Loc
+}
+export interface BlockPass {
+  typeName: 'BlockPass'
+  value?: RubyNode | undefined
+  operatorL: Loc
+  expressionL: Loc
+}
+export interface Break {
+  typeName: 'Break'
+  args: RubyNode[]
+  keywordL: Loc
+  expressionL: Loc
+}
+export interface Case {
+  typeName: 'Case'
+  expr?: RubyNode | undefined
+  whenBodies: RubyNode[]
+  elseBody?: RubyNode | undefined
+  keywordL: Loc
+  elseL?: Loc
+  endL: Loc
+  expressionL: Loc
+}
+export interface CaseMatch {
+  typeName: 'CaseMatch'
+  expr: RubyNode
+  inBodies: RubyNode[]
+  elseBody?: RubyNode | undefined
+  keywordL: Loc
+  elseL?: Loc
+  endL: Loc
+  expressionL: Loc
+}
+export interface Casgn {
+  typeName: 'Casgn'
+  scope?: RubyNode | undefined
+  name: string
+  value?: RubyNode | undefined
+  doubleColonL?: Loc
+  nameL: Loc
+  operatorL?: Loc
+  expressionL: Loc
+}
+export interface Cbase {
+  typeName: 'Cbase'
   expressionL: Loc
 }
 export interface Class {
@@ -92,6 +267,12 @@ export interface Class {
   endL: Loc
   expressionL: Loc
 }
+export interface Complex {
+  typeName: 'Complex'
+  value: string
+  operatorL?: Loc
+  expressionL: Loc
+}
 export interface Const {
   typeName: 'Const'
   scope?: RubyNode | undefined
@@ -100,21 +281,37 @@ export interface Const {
   nameL: Loc
   expressionL: Loc
 }
-export interface Cbase {
-  typeName: 'Cbase'
+export interface ConstPattern {
+  typeName: 'ConstPattern'
+  const: RubyNode
+  pattern: RubyNode
+  beginL: Loc
+  endL: Loc
   expressionL: Loc
 }
-export interface Sym {
-  typeName: 'Sym'
-  name: Bytes
+export interface CSend {
+  typeName: 'CSend'
+  recv: RubyNode
+  methodName: string
+  args: RubyNode[]
+  dotL: Loc
+  selectorL?: Loc
   beginL?: Loc
   endL?: Loc
+  operatorL?: Loc
   expressionL: Loc
 }
-export interface Undef {
-  typeName: 'Undef'
-  names: RubyNode[]
-  keywordL: Loc
+export interface Cvar {
+  typeName: 'Cvar'
+  name: string
+  expressionL: Loc
+}
+export interface Cvasgn {
+  typeName: 'Cvasgn'
+  name: string
+  value?: RubyNode | undefined
+  nameL: Loc
+  operatorL?: Loc
   expressionL: Loc
 }
 export interface Def {
@@ -128,48 +325,188 @@ export interface Def {
   assignmentL?: Loc
   expressionL: Loc
 }
-export interface Args {
-  typeName: 'Args'
-  args: Array<RubyNode>
-  expressionL: Loc
-  beginL?: Loc
-  endL?: Loc
-}
-export interface Arg {
-  typeName: 'Arg'
-  name: string
-  expressionL: Loc
-}
-export interface Mlhs {
-  typeName: 'Mlhs'
-  items: RubyNode[]
+export interface Defined {
+  typeName: 'Defined'
+  value: RubyNode
+  keywordL: Loc
   beginL?: Loc
   endL?: Loc
   expressionL: Loc
 }
-export interface Optarg {
-  typeName: 'Optarg'
+export interface Defs {
+  typeName: 'Defs'
+  definee: RubyNode
   name: string
-  default: RubyNode
+  args?: RubyNode | undefined
+  body?: RubyNode | undefined
+  keywordL: Loc
+  operatorL: Loc
   nameL: Loc
+  assignmentL?: Loc
+  endL?: Loc
+  expressionL: Loc
+}
+export interface Dstr {
+  typeName: 'Dstr'
+  beginL?: Loc
+  endL?: Loc
+  expressionL: Loc
+}
+export interface Dsym {
+  typeName: 'Dsym'
+  parts: RubyNode[]
+  beginL?: Loc
+  endL?: Loc
+  expressionL: Loc
+}
+export interface EFlipFlop {
+  typeName: 'EFlipFlop'
+  left?: RubyNode | undefined
+  right?: RubyNode | undefined
   operatorL: Loc
   expressionL: Loc
 }
-export interface Lvar {
-  typeName: 'Lvar'
-  name: string
+export interface EmptyElse {
+  typeName: 'EmptyElse'
   expressionL: Loc
 }
-export interface Restarg {
-  typeName: 'Restarg'
-  name?: string
-  operatorL: Loc
-  nameL?: Loc
+export interface Encoding {
+  typeName: 'Encoding'
   expressionL: Loc
+}
+export interface Ensure {
+  typeName: 'Ensure'
+  body?: RubyNode | undefined
+  ensure?: RubyNode | undefined
+  keywordL: Loc
+  expressionL: Loc
+}
+export interface Erange {
+  typeName: 'Erange'
+  left?: RubyNode | undefined
+  right?: RubyNode | undefined
+  operatorL: Loc
+  expressionL: Loc
+}
+export interface False {
+  typeName: 'False'
+  expressionL: Loc
+}
+export interface File {
+  typeName: 'File'
+  expressionL: Loc
+}
+export interface FindPattern {
+  typeName: 'FindPattern'
+  elements: RubyNode[]
+  beginL?: Loc
+  endL?: Loc
+  expressionL: Loc
+}
+export interface Float {
+  typeName: 'Float'
+  value: string
+  operatorL?: Loc
+  expressionL: Loc
+}
+export interface For {
+  typeName: 'For'
+  iterator: RubyNode
+  iteratee: RubyNode
+  body?: RubyNode | undefined
+  keywordL: Loc
+  operatorL: Loc
+  beginL: Loc
+  endL: Loc
+  expressionL: Loc
+}
+export interface ForwardArg {
+  typeName: 'ForwardArg'
+  expressionL: Loc
+}
+export interface ForwardedArgs {
+  
+}
+export interface Gvar {
+  
+}
+export interface Gvasgn {
+  
+}
+export interface Hash {
+  typeName: 'Hash'
+  pairs: RubyNode[]
+  beginL?: Loc
+  endL?: Loc
+  expressionL: Loc
+}
+export interface HashPattern {
+  
+}
+export interface Heredoc {
+  
+}
+export interface If {
+  typeName: 'If'
+  cond: RubyNode
+  ifTrue?: RubyNode | undefined
+  ifFalse?: RubyNode | undefined
+  keywordL: Loc
+  beginL: Loc
+  elseL?: Loc
+  endL?: Loc
+  expressionL: Loc
+}
+export interface IfGuard {
+  
+}
+export interface IFlipFlop {
+  
+}
+export interface IfMod {
+  
+}
+export interface IfTernary {
+  
+}
+export interface Index {
+  
+}
+export interface IndexAsgn {
+  
+}
+export interface InPattern {
+  
+}
+export interface Int {
+  typeName: 'Int'
+  value: string
+  operatorL?: Loc
+  expressionL: Loc
+}
+export interface Irange {
+  
+}
+export interface Ivar {
+  
+}
+export interface Ivasgn {
+  
 }
 export interface Kwarg {
   typeName: 'Kwarg'
   name: string
+  nameL: Loc
+  expressionL: Loc
+}
+export interface Kwargs {
+  
+}
+export interface KwBegin {
+  
+}
+export interface Kwnilarg {
+  typeName: 'Kwnilarg'
   nameL: Loc
   expressionL: Loc
 }
@@ -187,34 +524,60 @@ export interface Kwrestarg {
   nameL?: Loc
   expressionL: Loc
 }
-export interface Blockarg {
-  typeName: 'Blockarg'
-  name?: string
-  operatorL: Loc
-  nameL?: Loc
+export interface Kwsplat {
+  
+}
+export interface Lambda {
+  typeName: 'Lambda'
   expressionL: Loc
 }
-export interface Defs {
-  typeName: 'Defs'
-  definee: RubyNode
+export interface Line {
+  typeName: 'Line'
+  expressionL: Loc
+}
+export interface Lvar {
+  typeName: 'Lvar'
   name: string
-  args?: RubyNode | undefined
-  body?: RubyNode | undefined
-  keywordL: Loc
-  operatorL: Loc
-  nameL: Loc
-  assignmentL?: Loc
+  expressionL: Loc
+}
+export interface Lvasgn {
+  
+}
+export interface Masgn {
+  
+}
+export interface MatchAlt {
+  
+}
+export interface MatchAs {
+  
+}
+export interface MatchCurrentLine {
+  
+}
+export interface MatchNilPattern {
+  
+}
+export interface MatchPattern {
+  
+}
+export interface MatchPatternP {
+  
+}
+export interface MatchRest {
+  
+}
+export interface MatchVar {
+  
+}
+export interface MatchWithLvasgn {
+  
+}
+export interface Mlhs {
+  typeName: 'Mlhs'
+  items: RubyNode[]
+  beginL?: Loc
   endL?: Loc
-  expressionL: Loc
-}
-export interface RubySelf {
-  typeName: 'RubySelf'
-  expressionL: Loc
-}
-export interface Int {
-  typeName: 'Int'
-  value: string
-  operatorL?: Loc
   expressionL: Loc
 }
 export interface Module {
@@ -223,6 +586,104 @@ export interface Module {
   body?: RubyNode | undefined
   keywordL: Loc
   endL: Loc
+  expressionL: Loc
+}
+export interface Next {
+  
+}
+export interface Nil {
+  typeName: 'Nil'
+  expressionL: Loc
+}
+export interface NthRef {
+  
+}
+export interface Numblock {
+  
+}
+export interface OpAsgn {
+  
+}
+export interface Optarg {
+  typeName: 'Optarg'
+  name: string
+  default: RubyNode
+  nameL: Loc
+  operatorL: Loc
+  expressionL: Loc
+}
+export interface Or {
+  typeName: 'Or'
+  lhs: RubyNode
+  rhs: RubyNode
+  operatorL: Loc
+  expressionL: Loc
+}
+export interface OrAsgn {
+  
+}
+export interface Pair {
+  
+}
+export interface Pin {
+  
+}
+export interface Postexe {
+  typeName: 'Postexe'
+  body?: RubyNode | undefined
+  keywordL: Loc
+  beginL: Loc
+  endL: Loc
+  expressionL: Loc
+}
+export interface Preexe {
+  typeName: 'Preexe'
+  body?: RubyNode | undefined
+  keywordL: Loc
+  beginL: Loc
+  endL: Loc
+  expressionL: Loc
+}
+export interface Procarg0 {
+  
+}
+export interface Rational {
+  
+}
+export interface Redo {
+  
+}
+export interface Regexp {
+  
+}
+export interface RegOpt {
+  
+}
+export interface Rescue {
+  typeName: 'Rescue'
+  body?: RubyNode
+  rescueBodies: RubyNode[]
+  else?: RubyNode | undefined
+  elseL?: Loc
+  expressionL: Loc
+}
+export interface RescueBody {
+  
+}
+export interface Restarg {
+  typeName: 'Restarg'
+  name?: string
+  operatorL: Loc
+  nameL?: Loc
+  expressionL: Loc
+}
+export interface Retry {
+  
+}
+export interface Return {
+  typeName: 'Return'
+  args: RubyNode[]
+  keywordL: Loc
   expressionL: Loc
 }
 export interface SClass {
@@ -234,64 +695,104 @@ export interface SClass {
   endL: Loc
   expressionL: Loc
 }
-export interface Casgn {
-  typeName: 'Casgn'
-  scope?: RubyNode | undefined
-  name: string
-  value?: RubyNode | undefined
-  doubleColonL?: Loc
-  nameL: Loc
+export interface RubySelf {
+  typeName: 'RubySelf'
+  expressionL: Loc
+}
+export interface Send {
+  typeName: 'Send'
+  recv?: RubyNode | undefined
+  methodName: string
+  args: Array<RubyNode>
+  dotL?: Loc
+  selectorL?: Loc
+  beginL?: Loc
+  endL?: Loc
   operatorL?: Loc
   expressionL: Loc
 }
-export interface ForwardArg {
-  typeName: 'ForwardArg'
+export interface Shadowarg {
+  
+}
+export interface Splat {
+  
+}
+export interface Str {
+  typeName: 'Str'
+  value: Bytes
+  beginL?: Loc
+  endL?: Loc
   expressionL: Loc
 }
-export interface Kwnilarg {
-  typeName: 'Kwnilarg'
-  nameL: Loc
-  expressionL: Loc
-}
-export interface Preexe {
-  typeName: 'Preexe'
-  body?: RubyNode | undefined
+export interface Super {
+  typeName: 'Super'
+  args: RubyNode[]
   keywordL: Loc
-  beginL: Loc
-  endL: Loc
+  beginL?: Loc
+  endL?: Loc
   expressionL: Loc
 }
-export interface Postexe {
-  typeName: 'Postexe'
-  body?: RubyNode | undefined
-  keywordL: Loc
-  beginL: Loc
-  endL: Loc
-  expressionL: Loc
-}
-export interface File {
-  typeName: 'File'
-  expressionL: Loc
-}
-export interface Line {
-  typeName: 'Line'
-  expressionL: Loc
-}
-export interface Encoding {
-  typeName: 'Encoding'
+export interface Sym {
+  typeName: 'Sym'
+  name: Bytes
+  beginL?: Loc
+  endL?: Loc
   expressionL: Loc
 }
 export interface True {
   typeName: 'True'
   expressionL: Loc
 }
-export interface False {
-  typeName: 'False'
+export interface Undef {
+  typeName: 'Undef'
+  names: RubyNode[]
+  keywordL: Loc
   expressionL: Loc
 }
-export interface Nil {
-  typeName: 'Nil'
+export interface UnlessGuard {
+  
+}
+export interface Until {
+  
+}
+export interface UntilPost {
+  
+}
+export interface When {
+  typeName: 'When'
+  patterns: RubyNode[]
+  keywordL: Loc
+  beginL: Loc
   expressionL: Loc
+}
+export interface While {
+  typeName: 'While'
+  cond: RubyNode
+  body?: RubyNode | undefined
+  keywordL: Loc
+  beginL?: Loc
+  endL?: Loc
+  expressionL: Loc
+}
+export interface WhilePost {
+  
+}
+export interface XHeredoc {
+  
+}
+export interface Xstr {
+  
+}
+export interface Yield {
+  typeName: 'Yield'
+  args: RubyNode[]
+  keywordL: Loc
+  beginL?: Loc
+  endL?: Loc
+  expressionL: Loc
+}
+export interface ZSuper {
+  
 }
 export interface Bytes {
   /** Raw vector of bytes */
@@ -303,4 +804,4 @@ export interface Loc {
 }
 export function parse(text: string): RubyNode
 
-type RubyNode = Alias | AndAsgn | Send | Str | Begin | Class | Const | Cbase | Sym | Undef | Def | Args | Arg | Mlhs | Optarg | Lvar | Restarg | Kwarg | Kwoptarg | Kwrestarg | Blockarg | Defs | RubySelf | Int | Module | SClass | Casgn | ForwardArg | Kwnilarg | Preexe | Postexe | File | Line | Encoding | True | False | Nil
+type RubyNode = Alias | And | AndAsgn | Arg | Args | Array | ArrayPattern | ArrayPatternWithTail | BackRef | Begin | Block | Blockarg | BlockPass | Break | Case | CaseMatch | Casgn | Cbase | Class | Complex | Const | ConstPattern | CSend | Cvar | Cvasgn | Def | Defined | Defs | Dstr | Dsym | EFlipFlop | EmptyElse | Encoding | Ensure | Erange | False | File | FindPattern | Float | For | ForwardArg | ForwardedArgs | Gvar | Gvasgn | Hash | HashPattern | Heredoc | If | IfGuard | IFlipFlop | IfMod | IfTernary | Index | IndexAsgn | InPattern | Int | Irange | Ivar | Ivasgn | Kwarg | Kwargs | KwBegin | Kwnilarg | Kwoptarg | Kwrestarg | Kwsplat | Lambda | Line | Lvar | Lvasgn | Masgn | MatchAlt | MatchAs | MatchCurrentLine | MatchNilPattern | MatchPattern | MatchPatternP | MatchRest | MatchVar | MatchWithLvasgn | Mlhs | Module | Next | Nil | NthRef | Numblock | OpAsgn | Optarg | Or | OrAsgn | Pair | Pin | Postexe | Preexe | Procarg0 | Rational | Redo | Regexp | RegOpt | Rescue | RescueBody | Restarg | Retry | Return | SClass | RubySelf | Send | Shadowarg | Splat | Str | Super | Sym | True | Undef | UnlessGuard | Until | UntilPost | When | While | WhilePost | XHeredoc | Xstr | Yield | ZSuper

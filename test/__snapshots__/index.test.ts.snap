@@ -283,6 +283,1598 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                 "end": 97
               }
             },
+            "body": {
+              "typeName": "Begin",
+              "statements": [
+                {
+                  "typeName": "File",
+                  "expressionL": {
+                    "begin": 104,
+                    "end": 112
+                  }
+                },
+                {
+                  "typeName": "Line",
+                  "expressionL": {
+                    "begin": 119,
+                    "end": 127
+                  }
+                },
+                {
+                  "typeName": "Encoding",
+                  "expressionL": {
+                    "begin": 134,
+                    "end": 146
+                  }
+                },
+                {
+                  "typeName": "True",
+                  "expressionL": {
+                    "begin": 154,
+                    "end": 158
+                  }
+                },
+                {
+                  "typeName": "False",
+                  "expressionL": {
+                    "begin": 165,
+                    "end": 170
+                  }
+                },
+                {
+                  "typeName": "Nil",
+                  "expressionL": {
+                    "begin": 177,
+                    "end": 180
+                  }
+                },
+                {
+                  "typeName": "Int",
+                  "value": "-1",
+                  "operatorL": {
+                    "begin": 188,
+                    "end": 189
+                  },
+                  "expressionL": {
+                    "begin": 188,
+                    "end": 190
+                  }
+                },
+                {
+                  "typeName": "Float",
+                  "value": "-1.0",
+                  "operatorL": {
+                    "begin": 197,
+                    "end": 198
+                  },
+                  "expressionL": {
+                    "begin": 197,
+                    "end": 201
+                  }
+                },
+                {},
+                {
+                  "typeName": "Complex",
+                  "value": "-1i",
+                  "operatorL": {
+                    "begin": 218,
+                    "end": 219
+                  },
+                  "expressionL": {
+                    "begin": 218,
+                    "end": 221
+                  }
+                },
+                {},
+                {
+                  "typeName": "Lvar",
+                  "name": "a",
+                  "expressionL": {
+                    "begin": 241,
+                    "end": 242
+                  }
+                },
+                {},
+                {},
+                {
+                  "typeName": "Cvar",
+                  "name": "@@foo",
+                  "expressionL": {
+                    "begin": 275,
+                    "end": 280
+                  }
+                },
+                {
+                  "typeName": "Cvasgn",
+                  "name": "@@foo",
+                  "value": {
+                    "typeName": "Int",
+                    "value": "1",
+                    "expressionL": {
+                      "begin": 295,
+                      "end": 296
+                    }
+                  },
+                  "nameL": {
+                    "begin": 287,
+                    "end": 292
+                  },
+                  "operatorL": {
+                    "begin": 293,
+                    "end": 294
+                  },
+                  "expressionL": {
+                    "begin": 287,
+                    "end": 296
+                  }
+                },
+                {},
+                {},
+                {},
+                {
+                  "typeName": "BackRef",
+                  "name": "$\`",
+                  "expressionL": {
+                    "begin": 338,
+                    "end": 340
+                  }
+                },
+                {
+                  "typeName": "AndAsgn",
+                  "recv": {},
+                  "value": {
+                    "typeName": "Lvar",
+                    "name": "b",
+                    "expressionL": {
+                      "begin": 354,
+                      "end": 355
+                    }
+                  },
+                  "operatorL": {
+                    "begin": 350,
+                    "end": 353
+                  },
+                  "expressionL": {
+                    "begin": 348,
+                    "end": 355
+                  }
+                },
+                {
+                  "typeName": "Send",
+                  "recv": {
+                    "typeName": "Lvar",
+                    "name": "a",
+                    "expressionL": {
+                      "begin": 362,
+                      "end": 363
+                    }
+                  },
+                  "methodName": "&",
+                  "args": [
+                    {
+                      "typeName": "Lvar",
+                      "name": "b",
+                      "expressionL": {
+                        "begin": 366,
+                        "end": 367
+                      }
+                    }
+                  ],
+                  "selectorL": {
+                    "begin": 364,
+                    "end": 365
+                  },
+                  "expressionL": {
+                    "begin": 362,
+                    "end": 367
+                  }
+                },
+                {
+                  "typeName": "And",
+                  "lhs": {
+                    "typeName": "Lvar",
+                    "name": "a",
+                    "expressionL": {
+                      "begin": 374,
+                      "end": 375
+                    }
+                  },
+                  "rhs": {
+                    "typeName": "Lvar",
+                    "name": "b",
+                    "expressionL": {
+                      "begin": 380,
+                      "end": 381
+                    }
+                  },
+                  "operatorL": {
+                    "begin": 376,
+                    "end": 379
+                  },
+                  "expressionL": {
+                    "begin": 374,
+                    "end": 381
+                  }
+                },
+                {},
+                {
+                  "typeName": "Or",
+                  "lhs": {
+                    "typeName": "Lvar",
+                    "name": "a",
+                    "expressionL": {
+                      "begin": 402,
+                      "end": 403
+                    }
+                  },
+                  "rhs": {
+                    "typeName": "Lvar",
+                    "name": "b",
+                    "expressionL": {
+                      "begin": 407,
+                      "end": 408
+                    }
+                  },
+                  "operatorL": {
+                    "begin": 404,
+                    "end": 406
+                  },
+                  "expressionL": {
+                    "begin": 402,
+                    "end": 408
+                  }
+                },
+                {
+                  "typeName": "Or",
+                  "lhs": {
+                    "typeName": "Lvar",
+                    "name": "a",
+                    "expressionL": {
+                      "begin": 415,
+                      "end": 416
+                    }
+                  },
+                  "rhs": {
+                    "typeName": "Lvar",
+                    "name": "b",
+                    "expressionL": {
+                      "begin": 420,
+                      "end": 421
+                    }
+                  },
+                  "operatorL": {
+                    "begin": 417,
+                    "end": 419
+                  },
+                  "expressionL": {
+                    "begin": 415,
+                    "end": 421
+                  }
+                },
+                {
+                  "typeName": "CaseMatch",
+                  "expr": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 434,
+                      "end": 437
+                    }
+                  },
+                  "inBodies": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                  ],
+                  "elseBody": {
+                    "typeName": "Nil",
+                    "expressionL": {
+                      "begin": 869,
+                      "end": 872
+                    }
+                  },
+                  "keywordL": {
+                    "begin": 429,
+                    "end": 433
+                  },
+                  "elseL": {
+                    "begin": 854,
+                    "end": 858
+                  },
+                  "endL": {
+                    "begin": 879,
+                    "end": 882
+                  },
+                  "expressionL": {
+                    "begin": 429,
+                    "end": 882
+                  }
+                },
+                {
+                  "typeName": "CaseMatch",
+                  "expr": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 895,
+                      "end": 898
+                    }
+                  },
+                  "inBodies": [
+                    {}
+                  ],
+                  "elseBody": {
+                    "typeName": "EmptyElse",
+                    "expressionL": {
+                      "begin": 932,
+                      "end": 936
+                    }
+                  },
+                  "keywordL": {
+                    "begin": 890,
+                    "end": 894
+                  },
+                  "elseL": {
+                    "begin": 932,
+                    "end": 936
+                  },
+                  "endL": {
+                    "begin": 966,
+                    "end": 969
+                  },
+                  "expressionL": {
+                    "begin": 890,
+                    "end": 969
+                  }
+                },
+                {
+                  "typeName": "Sym",
+                  "name": {
+                    "raw": [
+                      102,
+                      111,
+                      111
+                    ]
+                  },
+                  "beginL": {
+                    "begin": 977,
+                    "end": 978
+                  },
+                  "expressionL": {
+                    "begin": 977,
+                    "end": 981
+                  }
+                },
+                {
+                  "typeName": "Dsym",
+                  "parts": [
+                    {
+                      "typeName": "Str",
+                      "value": {
+                        "raw": [
+                          102,
+                          111,
+                          111,
+                          32
+                        ]
+                      },
+                      "expressionL": {
+                        "begin": 990,
+                        "end": 994
+                      }
+                    },
+                    {
+                      "typeName": "Begin",
+                      "statements": [
+                        {
+                          "typeName": "Lvar",
+                          "name": "bar",
+                          "expressionL": {
+                            "begin": 996,
+                            "end": 999
+                          }
+                        }
+                      ],
+                      "beginL": {
+                        "begin": 994,
+                        "end": 996
+                      },
+                      "endL": {
+                        "begin": 999,
+                        "end": 1000
+                      },
+                      "expressionL": {
+                        "begin": 994,
+                        "end": 1000
+                      }
+                    }
+                  ],
+                  "beginL": {
+                    "begin": 988,
+                    "end": 990
+                  },
+                  "endL": {
+                    "begin": 1000,
+                    "end": 1001
+                  },
+                  "expressionL": {
+                    "begin": 988,
+                    "end": 1001
+                  }
+                },
+                {
+                  "typeName": "Str",
+                  "value": {
+                    "raw": [
+                      102,
+                      111,
+                      111
+                    ]
+                  },
+                  "beginL": {
+                    "begin": 1008,
+                    "end": 1009
+                  },
+                  "endL": {
+                    "begin": 1012,
+                    "end": 1013
+                  },
+                  "expressionL": {
+                    "begin": 1008,
+                    "end": 1013
+                  }
+                },
+                {
+                  "typeName": "Dstr",
+                  "beginL": {
+                    "begin": 1020,
+                    "end": 1021
+                  },
+                  "endL": {
+                    "begin": 1031,
+                    "end": 1032
+                  },
+                  "expressionL": {
+                    "begin": 1020,
+                    "end": 1032
+                  }
+                },
+                {},
+                {},
+                {},
+                {
+                  "typeName": "For",
+                  "iterator": {},
+                  "iteratee": {
+                    "typeName": "Array",
+                    "elements": [
+                      {
+                        "typeName": "Int",
+                        "value": "1",
+                        "expressionL": {
+                          "begin": 1116,
+                          "end": 1117
+                        }
+                      },
+                      {
+                        "typeName": "Int",
+                        "value": "2",
+                        "expressionL": {
+                          "begin": 1119,
+                          "end": 1120
+                        }
+                      },
+                      {
+                        "typeName": "Int",
+                        "value": "3",
+                        "expressionL": {
+                          "begin": 1122,
+                          "end": 1123
+                        }
+                      }
+                    ],
+                    "beginL": {
+                      "begin": 1115,
+                      "end": 1116
+                    },
+                    "endL": {
+                      "begin": 1123,
+                      "end": 1124
+                    },
+                    "expressionL": {
+                      "begin": 1115,
+                      "end": 1124
+                    }
+                  },
+                  "body": {
+                    "typeName": "Str",
+                    "value": {
+                      "raw": [
+                        116,
+                        101,
+                        115,
+                        116
+                      ]
+                    },
+                    "beginL": {
+                      "begin": 1138,
+                      "end": 1139
+                    },
+                    "endL": {
+                      "begin": 1143,
+                      "end": 1144
+                    },
+                    "expressionL": {
+                      "begin": 1138,
+                      "end": 1144
+                    }
+                  },
+                  "keywordL": {
+                    "begin": 1106,
+                    "end": 1109
+                  },
+                  "operatorL": {
+                    "begin": 1112,
+                    "end": 1114
+                  },
+                  "beginL": {
+                    "begin": 1125,
+                    "end": 1127
+                  },
+                  "endL": {
+                    "begin": 1151,
+                    "end": 1154
+                  },
+                  "expressionL": {
+                    "begin": 1106,
+                    "end": 1154
+                  }
+                },
+                {
+                  "typeName": "Block",
+                  "call": {
+                    "typeName": "Send",
+                    "methodName": "proc",
+                    "args": [],
+                    "selectorL": {
+                      "begin": 1162,
+                      "end": 1166
+                    },
+                    "expressionL": {
+                      "begin": 1162,
+                      "end": 1166
+                    }
+                  },
+                  "args": {
+                    "typeName": "Args",
+                    "args": [
+                      {}
+                    ],
+                    "expressionL": {
+                      "begin": 1169,
+                      "end": 1175
+                    },
+                    "beginL": {
+                      "begin": 1169,
+                      "end": 1170
+                    },
+                    "endL": {
+                      "begin": 1174,
+                      "end": 1175
+                    }
+                  },
+                  "body": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 1176,
+                      "end": 1179
+                    }
+                  },
+                  "beginL": {
+                    "begin": 1167,
+                    "end": 1168
+                  },
+                  "endL": {
+                    "begin": 1180,
+                    "end": 1181
+                  },
+                  "expressionL": {
+                    "begin": 1162,
+                    "end": 1181
+                  }
+                },
+                {
+                  "typeName": "Block",
+                  "call": {
+                    "typeName": "Send",
+                    "methodName": "proc",
+                    "args": [],
+                    "selectorL": {
+                      "begin": 1188,
+                      "end": 1192
+                    },
+                    "expressionL": {
+                      "begin": 1188,
+                      "end": 1192
+                    }
+                  },
+                  "args": {
+                    "typeName": "Args",
+                    "args": [
+                      {}
+                    ],
+                    "expressionL": {
+                      "begin": 1195,
+                      "end": 1204
+                    },
+                    "beginL": {
+                      "begin": 1195,
+                      "end": 1196
+                    },
+                    "endL": {
+                      "begin": 1203,
+                      "end": 1204
+                    }
+                  },
+                  "body": {
+                    "typeName": "Send",
+                    "methodName": "body",
+                    "args": [],
+                    "selectorL": {
+                      "begin": 1205,
+                      "end": 1209
+                    },
+                    "expressionL": {
+                      "begin": 1205,
+                      "end": 1209
+                    }
+                  },
+                  "beginL": {
+                    "begin": 1193,
+                    "end": 1194
+                  },
+                  "endL": {
+                    "begin": 1210,
+                    "end": 1211
+                  },
+                  "expressionL": {
+                    "begin": 1188,
+                    "end": 1211
+                  }
+                },
+                {
+                  "typeName": "Block",
+                  "call": {
+                    "typeName": "Send",
+                    "methodName": "proc",
+                    "args": [],
+                    "selectorL": {
+                      "begin": 1218,
+                      "end": 1222
+                    },
+                    "expressionL": {
+                      "begin": 1218,
+                      "end": 1222
+                    }
+                  },
+                  "args": {
+                    "typeName": "Args",
+                    "args": [
+                      {}
+                    ],
+                    "expressionL": {
+                      "begin": 1225,
+                      "end": 1236
+                    },
+                    "beginL": {
+                      "begin": 1225,
+                      "end": 1226
+                    },
+                    "endL": {
+                      "begin": 1235,
+                      "end": 1236
+                    }
+                  },
+                  "body": {
+                    "typeName": "Send",
+                    "methodName": "body",
+                    "args": [],
+                    "selectorL": {
+                      "begin": 1237,
+                      "end": 1241
+                    },
+                    "expressionL": {
+                      "begin": 1237,
+                      "end": 1241
+                    }
+                  },
+                  "beginL": {
+                    "begin": 1223,
+                    "end": 1224
+                  },
+                  "endL": {
+                    "begin": 1242,
+                    "end": 1243
+                  },
+                  "expressionL": {
+                    "begin": 1218,
+                    "end": 1243
+                  }
+                },
+                {
+                  "typeName": "Send",
+                  "recv": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 1251,
+                      "end": 1254
+                    }
+                  },
+                  "methodName": "bar",
+                  "args": [
+                    {
+                      "typeName": "Int",
+                      "value": "1",
+                      "expressionL": {
+                        "begin": 1259,
+                        "end": 1260
+                      }
+                    },
+                    {},
+                    {},
+                    {
+                      "typeName": "BlockPass",
+                      "value": {
+                        "typeName": "Send",
+                        "methodName": "baz",
+                        "args": [],
+                        "selectorL": {
+                          "begin": 1276,
+                          "end": 1279
+                        },
+                        "expressionL": {
+                          "begin": 1276,
+                          "end": 1279
+                        }
+                      },
+                      "operatorL": {
+                        "begin": 1275,
+                        "end": 1276
+                      },
+                      "expressionL": {
+                        "begin": 1275,
+                        "end": 1279
+                      }
+                    }
+                  ],
+                  "dotL": {
+                    "begin": 1254,
+                    "end": 1255
+                  },
+                  "selectorL": {
+                    "begin": 1255,
+                    "end": 1258
+                  },
+                  "beginL": {
+                    "begin": 1258,
+                    "end": 1259
+                  },
+                  "endL": {
+                    "begin": 1279,
+                    "end": 1280
+                  },
+                  "expressionL": {
+                    "begin": 1251,
+                    "end": 1280
+                  }
+                },
+                {
+                  "typeName": "Send",
+                  "recv": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 1287,
+                      "end": 1290
+                    }
+                  },
+                  "methodName": "bar=",
+                  "args": [
+                    {
+                      "typeName": "Int",
+                      "value": "42",
+                      "expressionL": {
+                        "begin": 1297,
+                        "end": 1299
+                      }
+                    }
+                  ],
+                  "dotL": {
+                    "begin": 1290,
+                    "end": 1291
+                  },
+                  "selectorL": {
+                    "begin": 1291,
+                    "end": 1294
+                  },
+                  "operatorL": {
+                    "begin": 1295,
+                    "end": 1296
+                  },
+                  "expressionL": {
+                    "begin": 1287,
+                    "end": 1299
+                  }
+                },
+                {
+                  "typeName": "CSend",
+                  "recv": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 1306,
+                      "end": 1309
+                    }
+                  },
+                  "methodName": "bar",
+                  "args": [],
+                  "dotL": {
+                    "begin": 1309,
+                    "end": 1311
+                  },
+                  "selectorL": {
+                    "begin": 1311,
+                    "end": 1314
+                  },
+                  "beginL": {
+                    "begin": 1314,
+                    "end": 1315
+                  },
+                  "endL": {
+                    "begin": 1315,
+                    "end": 1316
+                  },
+                  "expressionL": {
+                    "begin": 1306,
+                    "end": 1316
+                  }
+                },
+                {
+                  "typeName": "CSend",
+                  "recv": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 1323,
+                      "end": 1326
+                    }
+                  },
+                  "methodName": "bar=",
+                  "args": [
+                    {
+                      "typeName": "Int",
+                      "value": "42",
+                      "expressionL": {
+                        "begin": 1334,
+                        "end": 1336
+                      }
+                    }
+                  ],
+                  "dotL": {
+                    "begin": 1326,
+                    "end": 1328
+                  },
+                  "selectorL": {
+                    "begin": 1328,
+                    "end": 1331
+                  },
+                  "operatorL": {
+                    "begin": 1332,
+                    "end": 1333
+                  },
+                  "expressionL": {
+                    "begin": 1323,
+                    "end": 1336
+                  }
+                },
+                {
+                  "typeName": "Begin",
+                  "statements": [
+                    {}
+                  ],
+                  "beginL": {
+                    "begin": 1344,
+                    "end": 1345
+                  },
+                  "endL": {
+                    "begin": 1353,
+                    "end": 1354
+                  },
+                  "expressionL": {
+                    "begin": 1344,
+                    "end": 1354
+                  }
+                },
+                {
+                  "typeName": "Begin",
+                  "statements": [
+                    {}
+                  ],
+                  "beginL": {
+                    "begin": 1361,
+                    "end": 1362
+                  },
+                  "endL": {
+                    "begin": 1367,
+                    "end": 1368
+                  },
+                  "expressionL": {
+                    "begin": 1361,
+                    "end": 1368
+                  }
+                },
+                {
+                  "typeName": "Begin",
+                  "statements": [
+                    {}
+                  ],
+                  "beginL": {
+                    "begin": 1375,
+                    "end": 1376
+                  },
+                  "endL": {
+                    "begin": 1381,
+                    "end": 1382
+                  },
+                  "expressionL": {
+                    "begin": 1375,
+                    "end": 1382
+                  }
+                },
+                {
+                  "typeName": "Begin",
+                  "statements": [
+                    {
+                      "typeName": "Erange",
+                      "left": {
+                        "typeName": "Lvar",
+                        "name": "foo",
+                        "expressionL": {
+                          "begin": 1390,
+                          "end": 1393
+                        }
+                      },
+                      "right": {
+                        "typeName": "Lvar",
+                        "name": "bar",
+                        "expressionL": {
+                          "begin": 1396,
+                          "end": 1399
+                        }
+                      },
+                      "operatorL": {
+                        "begin": 1393,
+                        "end": 1396
+                      },
+                      "expressionL": {
+                        "begin": 1390,
+                        "end": 1399
+                      }
+                    }
+                  ],
+                  "beginL": {
+                    "begin": 1389,
+                    "end": 1390
+                  },
+                  "endL": {
+                    "begin": 1399,
+                    "end": 1400
+                  },
+                  "expressionL": {
+                    "begin": 1389,
+                    "end": 1400
+                  }
+                },
+                {
+                  "typeName": "Begin",
+                  "statements": [
+                    {
+                      "typeName": "Erange",
+                      "left": {
+                        "typeName": "Lvar",
+                        "name": "foo",
+                        "expressionL": {
+                          "begin": 1408,
+                          "end": 1411
+                        }
+                      },
+                      "operatorL": {
+                        "begin": 1411,
+                        "end": 1414
+                      },
+                      "expressionL": {
+                        "begin": 1408,
+                        "end": 1414
+                      }
+                    }
+                  ],
+                  "beginL": {
+                    "begin": 1407,
+                    "end": 1408
+                  },
+                  "endL": {
+                    "begin": 1414,
+                    "end": 1415
+                  },
+                  "expressionL": {
+                    "begin": 1407,
+                    "end": 1415
+                  }
+                },
+                {
+                  "typeName": "Begin",
+                  "statements": [
+                    {
+                      "typeName": "Erange",
+                      "right": {
+                        "typeName": "Lvar",
+                        "name": "bar",
+                        "expressionL": {
+                          "begin": 1426,
+                          "end": 1429
+                        }
+                      },
+                      "operatorL": {
+                        "begin": 1423,
+                        "end": 1426
+                      },
+                      "expressionL": {
+                        "begin": 1423,
+                        "end": 1429
+                      }
+                    }
+                  ],
+                  "beginL": {
+                    "begin": 1422,
+                    "end": 1423
+                  },
+                  "endL": {
+                    "begin": 1429,
+                    "end": 1430
+                  },
+                  "expressionL": {
+                    "begin": 1422,
+                    "end": 1430
+                  }
+                },
+                {
+                  "typeName": "Block",
+                  "call": {
+                    "typeName": "Send",
+                    "methodName": "foo",
+                    "args": [],
+                    "selectorL": {
+                      "begin": 1438,
+                      "end": 1441
+                    },
+                    "expressionL": {
+                      "begin": 1438,
+                      "end": 1441
+                    }
+                  },
+                  "body": {
+                    "typeName": "Begin",
+                    "statements": [
+                      {
+                        "typeName": "Break",
+                        "args": [
+                          {
+                            "typeName": "Int",
+                            "value": "42",
+                            "expressionL": {
+                              "begin": 1461,
+                              "end": 1463
+                            }
+                          }
+                        ],
+                        "keywordL": {
+                          "begin": 1455,
+                          "end": 1460
+                        },
+                        "expressionL": {
+                          "begin": 1455,
+                          "end": 1463
+                        }
+                      },
+                      {
+                        "typeName": "Return",
+                        "args": [
+                          {
+                            "typeName": "Int",
+                            "value": "42",
+                            "expressionL": {
+                              "begin": 1481,
+                              "end": 1483
+                            }
+                          }
+                        ],
+                        "keywordL": {
+                          "begin": 1474,
+                          "end": 1480
+                        },
+                        "expressionL": {
+                          "begin": 1474,
+                          "end": 1483
+                        }
+                      },
+                      {
+                        "typeName": "Yield",
+                        "args": [
+                          {
+                            "typeName": "Int",
+                            "value": "42",
+                            "expressionL": {
+                              "begin": 1500,
+                              "end": 1502
+                            }
+                          }
+                        ],
+                        "keywordL": {
+                          "begin": 1494,
+                          "end": 1499
+                        },
+                        "beginL": {
+                          "begin": 1499,
+                          "end": 1500
+                        },
+                        "endL": {
+                          "begin": 1502,
+                          "end": 1503
+                        },
+                        "expressionL": {
+                          "begin": 1494,
+                          "end": 1503
+                        }
+                      },
+                      {},
+                      {},
+                      {},
+                      {
+                        "typeName": "Super",
+                        "args": [
+                          {
+                            "typeName": "Lvar",
+                            "name": "foo",
+                            "expressionL": {
+                              "begin": 1569,
+                              "end": 1572
+                            }
+                          }
+                        ],
+                        "keywordL": {
+                          "begin": 1563,
+                          "end": 1568
+                        },
+                        "beginL": {
+                          "begin": 1568,
+                          "end": 1569
+                        },
+                        "endL": {
+                          "begin": 1572,
+                          "end": 1573
+                        },
+                        "expressionL": {
+                          "begin": 1563,
+                          "end": 1573
+                        }
+                      },
+                      {}
+                    ],
+                    "expressionL": {
+                      "begin": 1455,
+                      "end": 1589
+                    }
+                  },
+                  "beginL": {
+                    "begin": 1442,
+                    "end": 1444
+                  },
+                  "endL": {
+                    "begin": 1596,
+                    "end": 1599
+                  },
+                  "expressionL": {
+                    "begin": 1438,
+                    "end": 1599
+                  }
+                },
+                {
+                  "typeName": "Case",
+                  "expr": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 1612,
+                      "end": 1615
+                    }
+                  },
+                  "whenBodies": [
+                    {
+                      "typeName": "When",
+                      "patterns": [
+                        {
+                          "typeName": "Lvar",
+                          "name": "bar",
+                          "expressionL": {
+                            "begin": 1627,
+                            "end": 1630
+                          }
+                        }
+                      ],
+                      "keywordL": {
+                        "begin": 1622,
+                        "end": 1626
+                      },
+                      "beginL": {
+                        "begin": 1631,
+                        "end": 1635
+                      },
+                      "expressionL": {
+                        "begin": 1622,
+                        "end": 1639
+                      }
+                    }
+                  ],
+                  "elseBody": {
+                    "typeName": "Nil",
+                    "expressionL": {
+                      "begin": 1661,
+                      "end": 1664
+                    }
+                  },
+                  "keywordL": {
+                    "begin": 1607,
+                    "end": 1611
+                  },
+                  "elseL": {
+                    "begin": 1646,
+                    "end": 1650
+                  },
+                  "endL": {
+                    "begin": 1671,
+                    "end": 1674
+                  },
+                  "expressionL": {
+                    "begin": 1607,
+                    "end": 1674
+                  }
+                },
+                {
+                  "typeName": "Defined",
+                  "value": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 1691,
+                      "end": 1694
+                    }
+                  },
+                  "keywordL": {
+                    "begin": 1682,
+                    "end": 1690
+                  },
+                  "beginL": {
+                    "begin": 1690,
+                    "end": 1691
+                  },
+                  "endL": {
+                    "begin": 1694,
+                    "end": 1695
+                  },
+                  "expressionL": {
+                    "begin": 1682,
+                    "end": 1695
+                  }
+                },
+                {
+                  "typeName": "If",
+                  "cond": {},
+                  "keywordL": {
+                    "begin": 1703,
+                    "end": 1705
+                  },
+                  "beginL": {
+                    "begin": 1714,
+                    "end": 1715
+                  },
+                  "endL": {
+                    "begin": 1716,
+                    "end": 1719
+                  },
+                  "expressionL": {
+                    "begin": 1703,
+                    "end": 1719
+                  }
+                },
+                {
+                  "typeName": "If",
+                  "cond": {
+                    "typeName": "EFlipFlop",
+                    "left": {
+                      "typeName": "Lvar",
+                      "name": "foo",
+                      "expressionL": {
+                        "begin": 1729,
+                        "end": 1732
+                      }
+                    },
+                    "right": {
+                      "typeName": "Lvar",
+                      "name": "bar",
+                      "expressionL": {
+                        "begin": 1735,
+                        "end": 1738
+                      }
+                    },
+                    "operatorL": {
+                      "begin": 1732,
+                      "end": 1735
+                    },
+                    "expressionL": {
+                      "begin": 1729,
+                      "end": 1738
+                    }
+                  },
+                  "keywordL": {
+                    "begin": 1726,
+                    "end": 1728
+                  },
+                  "beginL": {
+                    "begin": 1738,
+                    "end": 1739
+                  },
+                  "endL": {
+                    "begin": 1740,
+                    "end": 1743
+                  },
+                  "expressionL": {
+                    "begin": 1726,
+                    "end": 1743
+                  }
+                },
+                {},
+                {
+                  "typeName": "Hash",
+                  "pairs": [
+                    {},
+                    {}
+                  ],
+                  "beginL": {
+                    "begin": 1874,
+                    "end": 1875
+                  },
+                  "endL": {
+                    "begin": 1900,
+                    "end": 1901
+                  },
+                  "expressionL": {
+                    "begin": 1874,
+                    "end": 1901
+                  }
+                },
+                {
+                  "typeName": "If",
+                  "cond": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 1912,
+                      "end": 1915
+                    }
+                  },
+                  "ifTrue": {
+                    "typeName": "Lvar",
+                    "name": "bar",
+                    "expressionL": {
+                      "begin": 1921,
+                      "end": 1924
+                    }
+                  },
+                  "ifFalse": {
+                    "typeName": "Send",
+                    "methodName": "baz",
+                    "args": [],
+                    "selectorL": {
+                      "begin": 1930,
+                      "end": 1933
+                    },
+                    "expressionL": {
+                      "begin": 1930,
+                      "end": 1933
+                    }
+                  },
+                  "keywordL": {
+                    "begin": 1909,
+                    "end": 1911
+                  },
+                  "beginL": {
+                    "begin": 1916,
+                    "end": 1920
+                  },
+                  "elseL": {
+                    "begin": 1925,
+                    "end": 1929
+                  },
+                  "endL": {
+                    "begin": 1935,
+                    "end": 1938
+                  },
+                  "expressionL": {
+                    "begin": 1909,
+                    "end": 1938
+                  }
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "typeName": "Block",
+                  "call": {
+                    "typeName": "Lambda",
+                    "expressionL": {
+                      "begin": 2084,
+                      "end": 2086
+                    }
+                  },
+                  "args": {
+                    "typeName": "Args",
+                    "args": [],
+                    "expressionL": {
+                      "begin": 2086,
+                      "end": 2088
+                    },
+                    "beginL": {
+                      "begin": 2086,
+                      "end": 2087
+                    },
+                    "endL": {
+                      "begin": 2087,
+                      "end": 2088
+                    }
+                  },
+                  "beginL": {
+                    "begin": 2089,
+                    "end": 2090
+                  },
+                  "endL": {
+                    "begin": 2090,
+                    "end": 2091
+                  },
+                  "expressionL": {
+                    "begin": 2084,
+                    "end": 2091
+                  }
+                },
+                {},
+                {
+                  "typeName": "If",
+                  "cond": {},
+                  "keywordL": {
+                    "begin": 2122,
+                    "end": 2124
+                  },
+                  "beginL": {
+                    "begin": 2130,
+                    "end": 2131
+                  },
+                  "endL": {
+                    "begin": 2137,
+                    "end": 2140
+                  },
+                  "expressionL": {
+                    "begin": 2122,
+                    "end": 2140
+                  }
+                },
+                {
+                  "typeName": "Send",
+                  "recv": {},
+                  "methodName": "=~",
+                  "args": [
+                    {
+                      "typeName": "Str",
+                      "value": {
+                        "raw": [
+                          98,
+                          97,
+                          114
+                        ]
+                      },
+                      "beginL": {
+                        "begin": 2167,
+                        "end": 2168
+                      },
+                      "endL": {
+                        "begin": 2171,
+                        "end": 2172
+                      },
+                      "expressionL": {
+                        "begin": 2167,
+                        "end": 2172
+                      }
+                    }
+                  ],
+                  "selectorL": {
+                    "begin": 2164,
+                    "end": 2166
+                  },
+                  "expressionL": {
+                    "begin": 2148,
+                    "end": 2172
+                  }
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "typeName": "While",
+                  "cond": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 2329,
+                      "end": 2332
+                    }
+                  },
+                  "body": {
+                    "typeName": "Lvar",
+                    "name": "bar",
+                    "expressionL": {
+                      "begin": 2346,
+                      "end": 2349
+                    }
+                  },
+                  "keywordL": {
+                    "begin": 2323,
+                    "end": 2328
+                  },
+                  "beginL": {
+                    "begin": 2333,
+                    "end": 2335
+                  },
+                  "endL": {
+                    "begin": 2356,
+                    "end": 2359
+                  },
+                  "expressionL": {
+                    "begin": 2323,
+                    "end": 2359
+                  }
+                },
+                {}
+              ],
+              "expressionL": {
+                "begin": 104,
+                "end": 2406
+              }
+            },
             "keywordL": {
               "begin": 48,
               "end": 51
@@ -348,6 +1940,14 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
               "endL": {
                 "begin": 2444,
                 "end": 2445
+              }
+            },
+            "body": {
+              "typeName": "Int",
+              "value": "42",
+              "expressionL": {
+                "begin": 2448,
+                "end": 2450
               }
             },
             "keywordL": {
@@ -623,6 +2223,29 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
               "endL": {
                 "begin": 2579,
                 "end": 2580
+              }
+            },
+            "body": {
+              "typeName": "Send",
+              "methodName": "bar",
+              "args": [
+                {}
+              ],
+              "selectorL": {
+                "begin": 2587,
+                "end": 2590
+              },
+              "beginL": {
+                "begin": 2590,
+                "end": 2591
+              },
+              "endL": {
+                "begin": 2594,
+                "end": 2595
+              },
+              "expressionL": {
+                "begin": 2587,
+                "end": 2595
               }
             },
             "keywordL": {

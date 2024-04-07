@@ -4,53 +4,53 @@
 ## Supported nodes
 
 - [x] Alias
-- [ ] And
+- [x] And
 - [x] AndAsgn
 - [x] Arg
 - [x] Args
-- [ ] Array
-- [ ] ArrayPattern
-- [ ] ArrayPatternWithTail
-- [ ] BackRef
+- [x] Array
+- [x] ArrayPattern
+- [x] ArrayPatternWithTail
+- [x] BackRef
 - [x] Begin
-- [ ] Block
+- [x] Block
 - [x] Blockarg
-- [ ] BlockPass
-- [ ] Break
-- [ ] Case
-- [ ] CaseMatch
+- [x] BlockPass
+- [x] Break
+- [x] Case
+- [x] CaseMatch
 - [x] Casgn
 - [x] Cbase
 - [x] Class
-- [ ] Complex
+- [x] Complex
 - [x] Const
-- [ ] ConstPattern
-- [ ] CSend
-- [ ] Cvar
-- [ ] Cvasgn
+- [x] ConstPattern
+- [x] CSend
+- [x] Cvar
+- [x] Cvasgn
 - [x] Def
-- [ ] Defined
+- [x] Defined
 - [x] Defs
-- [ ] Dstr
-- [ ] Dsym
-- [ ] EFlipFlop
-- [ ] EmptyElse
+- [x] Dstr
+- [x] Dsym
+- [x] EFlipFlop
+- [x] EmptyElse
 - [x] Encoding
-- [ ] Ensure
-- [ ] Erange
+- [x] Ensure
+- [x] Erange
 - [x] False
 - [x] File
-- [ ] FindPattern
-- [ ] Float
-- [ ] For
+- [x] FindPattern
+- [x] Float
+- [x] For
 - [x] ForwardArg
 - [ ] ForwardedArgs
 - [ ] Gvar
 - [ ] Gvasgn
-- [ ] Hash
+- [x] Hash
 - [ ] HashPattern
 - [ ] Heredoc
-- [ ] If
+- [x] If
 - [ ] IfGuard
 - [ ] IFlipFlop
 - [ ] IfMod
@@ -58,7 +58,7 @@
 - [ ] Index
 - [ ] IndexAsgn
 - [ ] InPattern
-- [ ] Int
+- [x] Int
 - [ ] Irange
 - [ ] Ivar
 - [ ] Ivasgn
@@ -69,7 +69,7 @@
 - [x] Kwoptarg
 - [ ] Kwrestarg
 - [ ] Kwsplat
-- [ ] Lambda
+- [x] Lambda
 - [x] Line
 - [x] Lvar
 - [ ] Lvasgn
@@ -91,7 +91,7 @@
 - [ ] Numblock
 - [ ] OpAsgn
 - [x] Optarg
-- [ ] Or
+- [x] Or
 - [ ] OrAsgn
 - [ ] Pair
 - [ ] Pin
@@ -102,28 +102,28 @@
 - [ ] Redo
 - [ ] Regexp
 - [ ] RegOpt
-- [ ] Rescue
+- [x] Rescue
 - [ ] RescueBody
 - [x] Restarg
 - [ ] Retry
-- [ ] Return
+- [x] Return
 - [x] SClass
 - [x] Self_
 - [x] Send
 - [ ] Shadowarg
 - [ ] Splat
 - [x] Str
-- [ ] Super
+- [x] Super
 - [x] Sym
 - [x] True
 - [x] Undef
 - [ ] UnlessGuard
 - [ ] Until
 - [ ] UntilPost
-- [ ] When
-- [ ] While
+- [x] When
+- [x] While
 - [ ] WhilePost
 - [ ] XHeredoc
 - [ ] Xstr
-- [ ] Yield
+- [x] Yield
 - [ ] ZSuper
