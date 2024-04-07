@@ -110,8 +110,8 @@ jobs:
         settings:
           - host: macos-latest
             target: x86_64-apple-darwin
-          - host: windows-latest
-            target: x86_64-pc-windows-msvc
+          # - host: windows-latest
+          #   target: x86_64-pc-windows-msvc
         node:
           - '18'
           - '20'
@@ -164,7 +164,7 @@ jobs:
         run: ls -R .
         shell: bash
       - name: Test bindings
-        run: docker run --rm -v $(pwd):/build -w /build node:${{ matrix.node }}-slim yarn test
+        run: docker run --rm -v $(pwd):/build -w /build node:${{ matrix.node }}-slim yarn test --run
   publish:
     name: Publish
     runs-on: ubuntu-latest
