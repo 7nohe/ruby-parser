@@ -19,7 +19,11 @@
   "types": "index.d.ts",
   "napi": {
     "name": "ruby-parser",
-    "triples": {}
+    "triples": {
+      "additional": [
+        "aarch64-apple-darwin"
+      ]
+    }
   },
   "license": "MIT",
   "devDependencies": {
