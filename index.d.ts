@@ -425,10 +425,13 @@ export interface ForwardArg {
   expressionL: Loc
 }
 export interface ForwardedArgs {
-  
+  typeName: 'ForwardedArgs'
+  expressionL: Loc
 }
 export interface Gvar {
-  
+  typeName: 'Gvar'
+  name: string
+  expressionL: Loc
 }
 export interface Gvasgn {
   

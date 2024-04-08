@@ -44,8 +44,8 @@
 - [x] Float
 - [x] For
 - [x] ForwardArg
-- [ ] ForwardedArgs
-- [ ] Gvar
+- [x] ForwardedArgs
+- [x] Gvar
 - [ ] Gvasgn
 - [x] Hash
 - [ ] HashPattern

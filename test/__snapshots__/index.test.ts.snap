@@ -408,7 +408,14 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     "end": 296
                   }
                 },
-                {},
+                {
+                  "typeName": "Gvar",
+                  "name": "$foo",
+                  "expressionL": {
+                    "begin": 303,
+                    "end": 307
+                  }
+                },
                 {},
                 {},
                 {
@@ -2229,7 +2236,13 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
               "typeName": "Send",
               "methodName": "bar",
               "args": [
-                {}
+                {
+                  "typeName": "ForwardedArgs",
+                  "expressionL": {
+                    "begin": 2591,
+                    "end": 2594
+                  }
+                }
               ],
               "selectorL": {
                 "begin": 2587,

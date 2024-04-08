@@ -11,8 +11,22 @@
   "files": [
     "ruby-parser.darwin-arm64.node"
   ],
+  "description": "Ruby parser for Node.js",
+  "keywords": [
+    "ruby",
+    "parser",
+    "nodejs",
+    "ruby-parser"
+  ],
+  "author": "Daiki Urata",
+  "homepage": "https://github.com/7nohe/ruby-parser",
   "license": "MIT",
   "engines": {
     "node": ">= 10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7nohe/ruby-parser.git"
+  },
+  "bugs": "https://github.com/7nohe/ruby-parser/issues"
 }
