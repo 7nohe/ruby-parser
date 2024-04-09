@@ -1,6 +1,6 @@
 {
   "name": "@7nohe/ruby-parser-darwin-arm64",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "os": [
     "darwin"
   ],
