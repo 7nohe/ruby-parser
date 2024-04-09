@@ -434,7 +434,12 @@ export interface Gvar {
   expressionL: Loc
 }
 export interface Gvasgn {
-  
+  typeName: 'Gvasgn'
+  name: string
+  value?: RubyNode | undefined
+  nameL: Loc
+  operatorL?: Loc
+  expressionL: Loc
 }
 export interface Hash {
   typeName: 'Hash'
@@ -444,10 +449,18 @@ export interface Hash {
   expressionL: Loc
 }
 export interface HashPattern {
-  
+  typeName: 'HashPattern'
+  elements: RubyNode[]
+  beginL?: Loc
+  endL?: Loc
+  expressionL: Loc
 }
 export interface Heredoc {
-  
+  typeName: 'Heredoc'
+  parts: RubyNode[]
+  heredocBodyL: Loc
+  heredocEndL: Loc
+  expressionL: Loc
 }
 export interface If {
   typeName: 'If'
@@ -461,25 +474,61 @@ export interface If {
   expressionL: Loc
 }
 export interface IfGuard {
-  
+  typeName: 'IfGuard'
+  cond: RubyNode
+  keywordL: Loc
+  expressionL: Loc
 }
 export interface IFlipFlop {
-  
+  typeName: 'IFlipFlop'
+  left?: RubyNode | undefined
+  right?: RubyNode | undefined
+  operatorL: Loc
+  expressionL: Loc
 }
 export interface IfMod {
-  
+  typeName: 'IfMod'
+  cond: RubyNode
+  ifTrue?: RubyNode | undefined
+  ifFalse?: RubyNode | undefined
+  keywordL: Loc
+  expressionL: Loc
 }
 export interface IfTernary {
-  
+  typeName: 'IfTernary'
+  cond: RubyNode
+  ifTrue: RubyNode
+  ifFalse: RubyNode
+  questionL: Loc
+  colonL: Loc
+  expressionL: Loc
 }
 export interface Index {
-  
+  typeName: 'Index'
+  recv: RubyNode
+  indexes: RubyNode[]
+  beginL: Loc
+  endL: Loc
+  expressionL: Loc
 }
 export interface IndexAsgn {
-  
+  typeName: 'IndexAsgn'
+  recv: RubyNode
+  indexes: RubyNode[]
+  value?: RubyNode | undefined
+  beginL: Loc
+  endL: Loc
+  operatorL?: Loc
+  expressionL: Loc
 }
 export interface InPattern {
-  
+  typeName: 'InPattern'
+  pattern: RubyNode
+  guard?: RubyNode | undefined
+  body?: RubyNode | undefined
+  keywordL: Loc
+  beginL: Loc
+  expressionL: Loc
 }
 export interface Int {
   typeName: 'Int'

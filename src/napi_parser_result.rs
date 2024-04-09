@@ -271,7 +271,6 @@ pub fn from_node(node: Node) -> RubyNode {
     Node::Xstr(val) => Either5::E(Either20::R(Xstr::from(val))),
     Node::Yield(val) => Either5::E(Either20::S(Yield::from(val))),
     Node::ZSuper(val) => Either5::E(Either20::T(ZSuper::from(val))),
-
     val => {
       // show unsupported node type
       println!("{:?}", val);

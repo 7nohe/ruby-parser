@@ -416,7 +416,30 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     "end": 307
                   }
                 },
-                {},
+                {
+                  "typeName": "Gvasgn",
+                  "name": "$foo",
+                  "value": {
+                    "typeName": "Int",
+                    "value": "1",
+                    "expressionL": {
+                      "begin": 321,
+                      "end": 322
+                    }
+                  },
+                  "nameL": {
+                    "begin": 314,
+                    "end": 318
+                  },
+                  "operatorL": {
+                    "begin": 319,
+                    "end": 320
+                  },
+                  "expressionL": {
+                    "begin": 314,
+                    "end": 322
+                  }
+                },
                 {},
                 {
                   "typeName": "BackRef",
@@ -569,18 +592,483 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     }
                   },
                   "inBodies": [
-                    {},
-                    {},
-                    {},
-                    {},
-                    {},
-                    {},
-                    {},
-                    {},
-                    {},
-                    {},
-                    {},
-                    {}
+                    {
+                      "typeName": "InPattern",
+                      "pattern": {
+                        "typeName": "ArrayPatternWithTail",
+                        "elements": [
+                          {
+                            "typeName": "Int",
+                            "value": "1",
+                            "expressionL": {
+                              "begin": 448,
+                              "end": 449
+                            }
+                          },
+                          {
+                            "typeName": "ArrayPattern",
+                            "elements": [
+                              {
+                                "typeName": "Int",
+                                "value": "2",
+                                "expressionL": {
+                                  "begin": 452,
+                                  "end": 453
+                                }
+                              }
+                            ],
+                            "beginL": {
+                              "begin": 451,
+                              "end": 452
+                            },
+                            "endL": {
+                              "begin": 453,
+                              "end": 454
+                            },
+                            "expressionL": {
+                              "begin": 451,
+                              "end": 454
+                            }
+                          },
+                          {
+                            "typeName": "Int",
+                            "value": "3",
+                            "expressionL": {
+                              "begin": 456,
+                              "end": 457
+                            }
+                          }
+                        ],
+                        "beginL": {
+                          "begin": 447,
+                          "end": 448
+                        },
+                        "endL": {
+                          "begin": 458,
+                          "end": 459
+                        },
+                        "expressionL": {
+                          "begin": 447,
+                          "end": 459
+                        }
+                      },
+                      "body": {
+                        "typeName": "True",
+                        "expressionL": {
+                          "begin": 465,
+                          "end": 469
+                        }
+                      },
+                      "keywordL": {
+                        "begin": 444,
+                        "end": 446
+                      },
+                      "beginL": {
+                        "begin": 460,
+                        "end": 464
+                      },
+                      "expressionL": {
+                        "begin": 444,
+                        "end": 469
+                      }
+                    },
+                    {
+                      "typeName": "InPattern",
+                      "pattern": {
+                        "typeName": "Const",
+                        "name": "Foo",
+                        "nameL": {
+                          "begin": 479,
+                          "end": 482
+                        },
+                        "expressionL": {
+                          "begin": 479,
+                          "end": 482
+                        }
+                      },
+                      "body": {
+                        "typeName": "True",
+                        "expressionL": {
+                          "begin": 493,
+                          "end": 497
+                        }
+                      },
+                      "keywordL": {
+                        "begin": 476,
+                        "end": 478
+                      },
+                      "beginL": {
+                        "begin": 482,
+                        "end": 483
+                      },
+                      "expressionL": {
+                        "begin": 476,
+                        "end": 497
+                      }
+                    },
+                    {
+                      "typeName": "InPattern",
+                      "pattern": {
+                        "typeName": "ConstPattern",
+                        "const": {
+                          "typeName": "Const",
+                          "name": "Foo",
+                          "nameL": {
+                            "begin": 507,
+                            "end": 510
+                          },
+                          "expressionL": {
+                            "begin": 507,
+                            "end": 510
+                          }
+                        },
+                        "pattern": {
+                          "typeName": "ArrayPattern",
+                          "elements": [
+                            {
+                              "typeName": "Int",
+                              "value": "1",
+                              "expressionL": {
+                                "begin": 511,
+                                "end": 512
+                              }
+                            },
+                            {
+                              "typeName": "Int",
+                              "value": "2",
+                              "expressionL": {
+                                "begin": 514,
+                                "end": 515
+                              }
+                            },
+                            {
+                              "typeName": "Int",
+                              "value": "3",
+                              "expressionL": {
+                                "begin": 517,
+                                "end": 518
+                              }
+                            }
+                          ],
+                          "expressionL": {
+                            "begin": 511,
+                            "end": 518
+                          }
+                        },
+                        "beginL": {
+                          "begin": 510,
+                          "end": 511
+                        },
+                        "endL": {
+                          "begin": 518,
+                          "end": 519
+                        },
+                        "expressionL": {
+                          "begin": 507,
+                          "end": 519
+                        }
+                      },
+                      "body": {
+                        "typeName": "True",
+                        "expressionL": {
+                          "begin": 530,
+                          "end": 534
+                        }
+                      },
+                      "keywordL": {
+                        "begin": 504,
+                        "end": 506
+                      },
+                      "beginL": {
+                        "begin": 519,
+                        "end": 520
+                      },
+                      "expressionL": {
+                        "begin": 504,
+                        "end": 534
+                      }
+                    },
+                    {
+                      "typeName": "InPattern",
+                      "pattern": {
+                        "typeName": "HashPattern",
+                        "elements": [
+                          {}
+                        ],
+                        "beginL": {
+                          "begin": 544,
+                          "end": 545
+                        },
+                        "endL": {
+                          "begin": 555,
+                          "end": 556
+                        },
+                        "expressionL": {
+                          "begin": 544,
+                          "end": 556
+                        }
+                      },
+                      "body": {
+                        "typeName": "True",
+                        "expressionL": {
+                          "begin": 567,
+                          "end": 571
+                        }
+                      },
+                      "keywordL": {
+                        "begin": 541,
+                        "end": 543
+                      },
+                      "beginL": {
+                        "begin": 556,
+                        "end": 557
+                      },
+                      "expressionL": {
+                        "begin": 541,
+                        "end": 571
+                      }
+                    },
+                    {
+                      "typeName": "InPattern",
+                      "pattern": {},
+                      "body": {
+                        "typeName": "True",
+                        "expressionL": {
+                          "begin": 596,
+                          "end": 600
+                        }
+                      },
+                      "keywordL": {
+                        "begin": 578,
+                        "end": 580
+                      },
+                      "beginL": {
+                        "begin": 585,
+                        "end": 586
+                      },
+                      "expressionL": {
+                        "begin": 578,
+                        "end": 600
+                      }
+                    },
+                    {
+                      "typeName": "InPattern",
+                      "pattern": {},
+                      "body": {
+                        "typeName": "True",
+                        "expressionL": {
+                          "begin": 626,
+                          "end": 630
+                        }
+                      },
+                      "keywordL": {
+                        "begin": 607,
+                        "end": 609
+                      },
+                      "beginL": {
+                        "begin": 621,
+                        "end": 625
+                      },
+                      "expressionL": {
+                        "begin": 607,
+                        "end": 630
+                      }
+                    },
+                    {
+                      "typeName": "InPattern",
+                      "pattern": {
+                        "typeName": "FindPattern",
+                        "elements": [
+                          {},
+                          {},
+                          {}
+                        ],
+                        "beginL": {
+                          "begin": 640,
+                          "end": 641
+                        },
+                        "endL": {
+                          "begin": 650,
+                          "end": 651
+                        },
+                        "expressionL": {
+                          "begin": 640,
+                          "end": 651
+                        }
+                      },
+                      "body": {
+                        "typeName": "Nil",
+                        "expressionL": {
+                          "begin": 667,
+                          "end": 670
+                        }
+                      },
+                      "keywordL": {
+                        "begin": 637,
+                        "end": 639
+                      },
+                      "beginL": {
+                        "begin": 652,
+                        "end": 656
+                      },
+                      "expressionL": {
+                        "begin": 637,
+                        "end": 670
+                      }
+                    },
+                    {
+                      "typeName": "InPattern",
+                      "pattern": {},
+                      "guard": {
+                        "typeName": "IfGuard",
+                        "cond": {
+                          "typeName": "Lvar",
+                          "name": "bar",
+                          "expressionL": {
+                            "begin": 687,
+                            "end": 690
+                          }
+                        },
+                        "keywordL": {
+                          "begin": 684,
+                          "end": 686
+                        },
+                        "expressionL": {
+                          "begin": 684,
+                          "end": 690
+                        }
+                      },
+                      "body": {
+                        "typeName": "Nil",
+                        "expressionL": {
+                          "begin": 701,
+                          "end": 704
+                        }
+                      },
+                      "keywordL": {
+                        "begin": 677,
+                        "end": 679
+                      },
+                      "beginL": {
+                        "begin": 690,
+                        "end": 691
+                      },
+                      "expressionL": {
+                        "begin": 677,
+                        "end": 704
+                      }
+                    },
+                    {
+                      "typeName": "InPattern",
+                      "pattern": {},
+                      "guard": {},
+                      "body": {
+                        "typeName": "Nil",
+                        "expressionL": {
+                          "begin": 739,
+                          "end": 742
+                        }
+                      },
+                      "keywordL": {
+                        "begin": 711,
+                        "end": 713
+                      },
+                      "beginL": {
+                        "begin": 728,
+                        "end": 729
+                      },
+                      "expressionL": {
+                        "begin": 711,
+                        "end": 742
+                      }
+                    },
+                    {
+                      "typeName": "InPattern",
+                      "pattern": {},
+                      "body": {
+                        "typeName": "Nil",
+                        "expressionL": {
+                          "begin": 777,
+                          "end": 780
+                        }
+                      },
+                      "keywordL": {
+                        "begin": 749,
+                        "end": 751
+                      },
+                      "beginL": {
+                        "begin": 762,
+                        "end": 766
+                      },
+                      "expressionL": {
+                        "begin": 749,
+                        "end": 780
+                      }
+                    },
+                    {
+                      "typeName": "InPattern",
+                      "pattern": {
+                        "typeName": "HashPattern",
+                        "elements": [
+                          {}
+                        ],
+                        "expressionL": {
+                          "begin": 790,
+                          "end": 795
+                        }
+                      },
+                      "body": {
+                        "typeName": "Nil",
+                        "expressionL": {
+                          "begin": 811,
+                          "end": 814
+                        }
+                      },
+                      "keywordL": {
+                        "begin": 787,
+                        "end": 789
+                      },
+                      "beginL": {
+                        "begin": 796,
+                        "end": 800
+                      },
+                      "expressionL": {
+                        "begin": 787,
+                        "end": 814
+                      }
+                    },
+                    {
+                      "typeName": "InPattern",
+                      "pattern": {
+                        "typeName": "ArrayPattern",
+                        "elements": [
+                          {}
+                        ],
+                        "expressionL": {
+                          "begin": 824,
+                          "end": 828
+                        }
+                      },
+                      "body": {
+                        "typeName": "Nil",
+                        "expressionL": {
+                          "begin": 844,
+                          "end": 847
+                        }
+                      },
+                      "keywordL": {
+                        "begin": 821,
+                        "end": 823
+                      },
+                      "beginL": {
+                        "begin": 829,
+                        "end": 833
+                      },
+                      "expressionL": {
+                        "begin": 821,
+                        "end": 847
+                      }
+                    }
                   ],
                   "elseBody": {
                     "typeName": "Nil",
@@ -617,7 +1105,29 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     }
                   },
                   "inBodies": [
-                    {}
+                    {
+                      "typeName": "InPattern",
+                      "pattern": {},
+                      "body": {
+                        "typeName": "Nil",
+                        "expressionL": {
+                          "begin": 922,
+                          "end": 925
+                        }
+                      },
+                      "keywordL": {
+                        "begin": 905,
+                        "end": 907
+                      },
+                      "beginL": {
+                        "begin": 911,
+                        "end": 912
+                      },
+                      "expressionL": {
+                        "begin": 905,
+                        "end": 925
+                      }
+                    }
                   ],
                   "elseBody": {
                     "typeName": "EmptyElse",
@@ -756,7 +1266,22 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                   }
                 },
                 {},
-                {},
+                {
+                  "typeName": "Heredoc",
+                  "parts": [],
+                  "heredocBodyL": {
+                    "begin": 1060,
+                    "end": 1070
+                  },
+                  "heredocEndL": {
+                    "begin": 1060,
+                    "end": 1070
+                  },
+                  "expressionL": {
+                    "begin": 1052,
+                    "end": 1059
+                  }
+                },
                 {},
                 {
                   "typeName": "For",
@@ -1596,7 +2121,33 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                 },
                 {
                   "typeName": "If",
-                  "cond": {},
+                  "cond": {
+                    "typeName": "IFlipFlop",
+                    "left": {
+                      "typeName": "Lvar",
+                      "name": "foo",
+                      "expressionL": {
+                        "begin": 1706,
+                        "end": 1709
+                      }
+                    },
+                    "right": {
+                      "typeName": "Lvar",
+                      "name": "bar",
+                      "expressionL": {
+                        "begin": 1711,
+                        "end": 1714
+                      }
+                    },
+                    "operatorL": {
+                      "begin": 1709,
+                      "end": 1711
+                    },
+                    "expressionL": {
+                      "begin": 1706,
+                      "end": 1714
+                    }
+                  },
                   "keywordL": {
                     "begin": 1703,
                     "end": 1705
@@ -1732,12 +2283,199 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     "end": 1938
                   }
                 },
+                {
+                  "typeName": "IfMod",
+                  "cond": {
+                    "typeName": "Lvar",
+                    "name": "bar",
+                    "expressionL": {
+                      "begin": 1952,
+                      "end": 1955
+                    }
+                  },
+                  "ifTrue": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 1945,
+                      "end": 1948
+                    }
+                  },
+                  "keywordL": {
+                    "begin": 1949,
+                    "end": 1951
+                  },
+                  "expressionL": {
+                    "begin": 1945,
+                    "end": 1955
+                  }
+                },
+                {
+                  "typeName": "IfMod",
+                  "cond": {
+                    "typeName": "Lvar",
+                    "name": "bar",
+                    "expressionL": {
+                      "begin": 1973,
+                      "end": 1976
+                    }
+                  },
+                  "ifFalse": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 1962,
+                      "end": 1965
+                    }
+                  },
+                  "keywordL": {
+                    "begin": 1966,
+                    "end": 1972
+                  },
+                  "expressionL": {
+                    "begin": 1962,
+                    "end": 1976
+                  }
+                },
+                {
+                  "typeName": "IfTernary",
+                  "cond": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 1983,
+                      "end": 1986
+                    }
+                  },
+                  "ifTrue": {
+                    "typeName": "Lvar",
+                    "name": "bar",
+                    "expressionL": {
+                      "begin": 1989,
+                      "end": 1992
+                    }
+                  },
+                  "ifFalse": {
+                    "typeName": "Send",
+                    "methodName": "baz",
+                    "args": [],
+                    "selectorL": {
+                      "begin": 1995,
+                      "end": 1998
+                    },
+                    "expressionL": {
+                      "begin": 1995,
+                      "end": 1998
+                    }
+                  },
+                  "questionL": {
+                    "begin": 1987,
+                    "end": 1988
+                  },
+                  "colonL": {
+                    "begin": 1993,
+                    "end": 1994
+                  },
+                  "expressionL": {
+                    "begin": 1983,
+                    "end": 1998
+                  }
+                },
                 {},
-                {},
-                {},
-                {},
-                {},
-                {},
+                {
+                  "typeName": "Index",
+                  "recv": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 2024,
+                      "end": 2027
+                    }
+                  },
+                  "indexes": [
+                    {
+                      "typeName": "Int",
+                      "value": "1",
+                      "expressionL": {
+                        "begin": 2028,
+                        "end": 2029
+                      }
+                    },
+                    {
+                      "typeName": "Int",
+                      "value": "2",
+                      "expressionL": {
+                        "begin": 2031,
+                        "end": 2032
+                      }
+                    }
+                  ],
+                  "beginL": {
+                    "begin": 2027,
+                    "end": 2028
+                  },
+                  "endL": {
+                    "begin": 2032,
+                    "end": 2033
+                  },
+                  "expressionL": {
+                    "begin": 2024,
+                    "end": 2033
+                  }
+                },
+                {
+                  "typeName": "IndexAsgn",
+                  "recv": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 2040,
+                      "end": 2043
+                    }
+                  },
+                  "indexes": [
+                    {
+                      "typeName": "Int",
+                      "value": "1",
+                      "expressionL": {
+                        "begin": 2044,
+                        "end": 2045
+                      }
+                    },
+                    {
+                      "typeName": "Int",
+                      "value": "2",
+                      "expressionL": {
+                        "begin": 2047,
+                        "end": 2048
+                      }
+                    }
+                  ],
+                  "value": {
+                    "typeName": "Int",
+                    "value": "3",
+                    "expressionL": {
+                      "begin": 2052,
+                      "end": 2053
+                    }
+                  },
+                  "beginL": {
+                    "begin": 2043,
+                    "end": 2044
+                  },
+                  "endL": {
+                    "begin": 2048,
+                    "end": 2049
+                  },
+                  "operatorL": {
+                    "begin": 2050,
+                    "end": 2051
+                  },
+                  "expressionL": {
+                    "begin": 2040,
+                    "end": 2053
+                  }
+                },
                 {},
                 {
                   "typeName": "Block",

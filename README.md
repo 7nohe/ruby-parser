@@ -46,18 +46,18 @@
 - [x] ForwardArg
 - [x] ForwardedArgs
 - [x] Gvar
-- [ ] Gvasgn
+- [x] Gvasgn
 - [x] Hash
-- [ ] HashPattern
-- [ ] Heredoc
+- [x] HashPattern
+- [x] Heredoc
 - [x] If
-- [ ] IfGuard
-- [ ] IFlipFlop
-- [ ] IfMod
-- [ ] IfTernary
-- [ ] Index
-- [ ] IndexAsgn
-- [ ] InPattern
+- [x] IfGuard
+- [x] IFlipFlop
+- [x] IfMod
+- [x] IfTernary
+- [x] Index
+- [x] IndexAsgn
+- [x] InPattern
 - [x] Int
 - [ ] Irange
 - [ ] Ivar
