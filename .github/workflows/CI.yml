@@ -28,10 +28,9 @@ jobs:
           - host: macos-latest
             target: x86_64-apple-darwin
             build: yarn build
-          # Disabled due to snapshot tests failing
-          # - host: windows-latest
-          #   build: yarn build
-          #   target: x86_64-pc-windows-msvc
+          - host: windows-latest
+            build: yarn build
+            target: x86_64-pc-windows-msvc
           - host: ubuntu-latest
             target: x86_64-unknown-linux-gnu
             docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-debian
@@ -113,8 +112,8 @@ jobs:
         settings:
           - host: macos-latest
             target: x86_64-apple-darwin
-          # - host: windows-latest
-          #   target: x86_64-pc-windows-msvc
+          - host: windows-latest
+            target: x86_64-pc-windows-msvc
         node:
           - '18'
           - '20'
@@ -138,6 +137,8 @@ jobs:
         shell: bash
       - name: Test bindings
         run: yarn test --run
+        # Skip tests on Windows(Snapshot tests are failing on Windows)
+        if: ${{ matrix.settings.target != 'x86_64-pc-windows-msvc' }}
   test-linux-x64-gnu-binding:
     name: Test bindings on Linux-x64-gnu - node@${{ matrix.node }}
     needs:

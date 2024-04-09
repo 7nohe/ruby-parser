@@ -39,6 +39,8 @@
   "scripts": {
     "artifacts": "napi artifacts",
     "build": "napi build --platform --release && npx vite-node insertTypeAlias.ts",
+    "build:apple": "napi build --platform --release --target aarch64-apple-darwin && npx vite-node insertTypeAlias.ts",
+    "build:linux": "napi build --platform --release --target x86_64-unknown-linux-gnu && npx vite-node insertTypeAlias.ts",
     "build:debug": "napi build --platform && npx vite-node insertTypeAlias.ts",
     "prepublishOnly": "napi prepublish -t npm",
     "test": "vitest",
