@@ -114,6 +114,8 @@ jobs:
             target: x86_64-apple-darwin
           - host: windows-latest
             target: x86_64-pc-windows-msvc
+          - host: macos-latest
+            target: aarch64-apple-darwin
         node:
           - '18'
           - '20'
