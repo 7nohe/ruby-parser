@@ -1,6 +1,6 @@
 {
   "name": "@7nohe/ruby-parser",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Ruby parser for Node.js",
   "author": "Daiki Urata",
   "homepage": "https://github.com/7nohe/ruby-parser",
