@@ -59,33 +59,33 @@
 - [x] IndexAsgn
 - [x] InPattern
 - [x] Int
-- [ ] Irange
-- [ ] Ivar
-- [ ] Ivasgn
+- [x] Irange
+- [x] Ivar
+- [x] Ivasgn
 - [x] Kwarg
-- [ ] Kwargs
-- [ ] KwBegin
+- [x] Kwargs
+- [x] KwBegin
 - [x] Kwnilarg
 - [x] Kwoptarg
-- [ ] Kwrestarg
-- [ ] Kwsplat
+- [x] Kwrestarg
+- [x] Kwsplat
 - [x] Lambda
 - [x] Line
 - [x] Lvar
-- [ ] Lvasgn
-- [ ] Masgn
-- [ ] MatchAlt
-- [ ] MatchAs
-- [ ] MatchCurrentLine
-- [ ] MatchNilPattern
-- [ ] MatchPattern
-- [ ] MatchPatternP
-- [ ] MatchRest
-- [ ] MatchVar
-- [ ] MatchWithLvasgn
+- [x] Lvasgn
+- [x] Masgn
+- [x] MatchAlt
+- [x] MatchAs
+- [x] MatchCurrentLine
+- [x] MatchNilPattern
+- [x] MatchPattern
+- [x] MatchPatternP
+- [x] MatchRest
+- [x] MatchVar
+- [x] MatchWithLvasgn
 - [x] Mlhs
 - [x] Module
-- [ ] Next
+- [x] Next
 - [x] Nil
 - [ ] NthRef
 - [ ] Numblock

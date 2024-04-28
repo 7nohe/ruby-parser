@@ -537,13 +537,24 @@ export interface Int {
   expressionL: Loc
 }
 export interface Irange {
-  
+  typeName: 'Irange'
+  left?: RubyNode | undefined
+  right?: RubyNode | undefined
+  operatorL: Loc
+  expressionL: Loc
 }
 export interface Ivar {
-  
+  typeName: 'Ivar'
+  name: string
+  expressionL: Loc
 }
 export interface Ivasgn {
-  
+  typeName: 'Ivasgn'
+  name: string
+  value?: NapiBox
+  nameL: Loc
+  operatorL?: Loc
+  expressionL: Loc
 }
 export interface Kwarg {
   typeName: 'Kwarg'
@@ -552,10 +563,16 @@ export interface Kwarg {
   expressionL: Loc
 }
 export interface Kwargs {
-  
+  typeName: 'Kwargs'
+  pairs: Array<RubyNode>
+  expressionL: Loc
 }
 export interface KwBegin {
-  
+  typeName: 'KwBegin'
+  statements: Array<RubyNode>
+  beginL?: Loc
+  endL?: Loc
+  expressionL: Loc
 }
 export interface Kwnilarg {
   typeName: 'Kwnilarg'
@@ -577,7 +594,10 @@ export interface Kwrestarg {
   expressionL: Loc
 }
 export interface Kwsplat {
-  
+  typeName: 'Kwsplat'
+  value: NapiBox
+  operatorL: Loc
+  expressionL: Loc
 }
 export interface Lambda {
   typeName: 'Lambda'
@@ -593,37 +613,73 @@ export interface Lvar {
   expressionL: Loc
 }
 export interface Lvasgn {
-  
+  typeName: 'Lvasgn'
+  value?: NapiBox
+  nameL: Loc
+  operatorL?: Loc
+  expressionL: Loc
 }
 export interface Masgn {
-  
+  typeName: 'Masgn'
+  lhs: NapiBox
+  rhs: NapiBox
+  operatorL: Loc
+  expressionL: Loc
 }
 export interface MatchAlt {
-  
+  typeName: 'MatchAlt'
+  lhs: NapiBox
+  rhs: NapiBox
+  operatorL: Loc
+  expressionL: Loc
 }
 export interface MatchAs {
-  
+  typeName: 'MatchAs'
+  value: NapiBox
+  as: NapiBox
+  operatorL: Loc
+  expressionL: Loc
 }
 export interface MatchCurrentLine {
-  
+  typeName: 'MatchCurrentLine'
+  re: NapiBox
+  expressionL: Loc
 }
 export interface MatchNilPattern {
-  
+  typeName: 'MatchNilPattern'
+  operatorL: Loc
+  nameL: Loc
+  expressionL: Loc
 }
 export interface MatchPattern {
-  
+  typeName: 'MatchPattern'
+  value: NapiBox
+  operatorL: Loc
+  expressionL: Loc
 }
 export interface MatchPatternP {
-  
+  typeName: 'MatchPatternP'
+  value: NapiBox
+  pattern: NapiBox
+  operatorL: Loc
+  expressionL: Loc
 }
 export interface MatchRest {
-  
+  typeName: 'MatchRest'
+  name?: NapiBox
+  operatorL: Loc
+  expressionL: Loc
 }
 export interface MatchVar {
-  
+  typeName: 'MatchVar'
+  nameL: Loc
+  expressionL: Loc
 }
 export interface MatchWithLvasgn {
-  
+  typeName: 'MatchWithLvasgn'
+  re: NapiBox
+  operatorL: Loc
+  expressionL: Loc
 }
 export interface Mlhs {
   typeName: 'Mlhs'
@@ -641,20 +697,23 @@ export interface Module {
   expressionL: Loc
 }
 export interface Next {
-  
+  typeName: 'Next'
+  args: Array<RubyNode>
+  keywordL: Loc
+  expressionL: Loc
 }
 export interface Nil {
   typeName: 'Nil'
   expressionL: Loc
 }
 export interface NthRef {
-  
+  typeName: 'NthRef'
 }
 export interface Numblock {
-  
+  typeName: 'Numblock'
 }
 export interface OpAsgn {
-  
+  typeName: 'OpAsgn'
 }
 export interface Optarg {
   typeName: 'Optarg'
@@ -672,13 +731,13 @@ export interface Or {
   expressionL: Loc
 }
 export interface OrAsgn {
-  
+  typeName: 'OrAsgn'
 }
 export interface Pair {
-  
+  typeName: 'Pair'
 }
 export interface Pin {
-  
+  typeName: 'Pin'
 }
 export interface Postexe {
   typeName: 'Postexe'
@@ -697,19 +756,19 @@ export interface Preexe {
   expressionL: Loc
 }
 export interface Procarg0 {
-  
+  typeName: 'Procarg0'
 }
 export interface Rational {
-  
+  typeName: 'Rational'
 }
 export interface Redo {
-  
+  typeName: 'Redo'
 }
 export interface Regexp {
-  
+  typeName: 'Regexp'
 }
 export interface RegOpt {
-  
+  typeName: 'RegOpt'
 }
 export interface Rescue {
   typeName: 'Rescue'
@@ -720,7 +779,7 @@ export interface Rescue {
   expressionL: Loc
 }
 export interface RescueBody {
-  
+  typeName: 'RescueBody'
 }
 export interface Restarg {
   typeName: 'Restarg'
@@ -730,7 +789,7 @@ export interface Restarg {
   expressionL: Loc
 }
 export interface Retry {
-  
+  typeName: 'Retry'
 }
 export interface Return {
   typeName: 'Return'
@@ -764,10 +823,10 @@ export interface Send {
   expressionL: Loc
 }
 export interface Shadowarg {
-  
+  typeName: 'Shadowarg'
 }
 export interface Splat {
-  
+  typeName: 'Splat'
 }
 export interface Str {
   typeName: 'Str'
@@ -802,13 +861,13 @@ export interface Undef {
   expressionL: Loc
 }
 export interface UnlessGuard {
-  
+  typeName: 'UnlessGuard'
 }
 export interface Until {
-  
+  typeName: 'Until'
 }
 export interface UntilPost {
-  
+  typeName: 'UntilPost'
 }
 export interface When {
   typeName: 'When'
@@ -827,13 +886,13 @@ export interface While {
   expressionL: Loc
 }
 export interface WhilePost {
-  
+  typeName: 'WhilePost'
 }
 export interface XHeredoc {
-  
+  typeName: 'XHeredoc'
 }
 export interface Xstr {
-  
+  typeName: 'Xstr'
 }
 export interface Yield {
   typeName: 'Yield'
@@ -844,7 +903,7 @@ export interface Yield {
   expressionL: Loc
 }
 export interface ZSuper {
-  
+  typeName: 'ZSuper'
 }
 export interface Bytes {
   /** Raw vector of bytes */
