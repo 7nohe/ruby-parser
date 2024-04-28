@@ -352,7 +352,9 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     "end": 201
                   }
                 },
-                {},
+                {
+                  "typeName": "Rational"
+                },
                 {
                   "typeName": "Complex",
                   "value": "-1i",
@@ -365,7 +367,29 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     "end": 221
                   }
                 },
-                {},
+                {
+                  "typeName": "Lvasgn",
+                  "value": {
+                    "typeName": "Int",
+                    "value": "1",
+                    "expressionL": {
+                      "begin": 233,
+                      "end": 234
+                    }
+                  },
+                  "nameL": {
+                    "begin": 229,
+                    "end": 230
+                  },
+                  "operatorL": {
+                    "begin": 231,
+                    "end": 232
+                  },
+                  "expressionL": {
+                    "begin": 229,
+                    "end": 234
+                  }
+                },
                 {
                   "typeName": "Lvar",
                   "name": "a",
@@ -374,8 +398,38 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     "end": 242
                   }
                 },
-                {},
-                {},
+                {
+                  "typeName": "Ivar",
+                  "name": "@foo",
+                  "expressionL": {
+                    "begin": 249,
+                    "end": 253
+                  }
+                },
+                {
+                  "typeName": "Ivasgn",
+                  "name": "@foo",
+                  "value": {
+                    "typeName": "Int",
+                    "value": "1",
+                    "expressionL": {
+                      "begin": 267,
+                      "end": 268
+                    }
+                  },
+                  "nameL": {
+                    "begin": 260,
+                    "end": 264
+                  },
+                  "operatorL": {
+                    "begin": 265,
+                    "end": 266
+                  },
+                  "expressionL": {
+                    "begin": 260,
+                    "end": 268
+                  }
+                },
                 {
                   "typeName": "Cvar",
                   "name": "@@foo",
@@ -440,7 +494,9 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     "end": 322
                   }
                 },
-                {},
+                {
+                  "typeName": "NthRef"
+                },
                 {
                   "typeName": "BackRef",
                   "name": "$\`",
@@ -451,7 +507,17 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                 },
                 {
                   "typeName": "AndAsgn",
-                  "recv": {},
+                  "recv": {
+                    "typeName": "Lvasgn",
+                    "nameL": {
+                      "begin": 348,
+                      "end": 349
+                    },
+                    "expressionL": {
+                      "begin": 348,
+                      "end": 349
+                    }
+                  },
                   "value": {
                     "typeName": "Lvar",
                     "name": "b",
@@ -526,7 +592,9 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     "end": 381
                   }
                 },
-                {},
+                {
+                  "typeName": "OrAsgn"
+                },
                 {
                   "typeName": "Or",
                   "lhs": {
@@ -793,7 +861,9 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                       "pattern": {
                         "typeName": "HashPattern",
                         "elements": [
-                          {}
+                          {
+                            "typeName": "Pair"
+                          }
                         ],
                         "beginL": {
                           "begin": 544,
@@ -830,7 +900,9 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     },
                     {
                       "typeName": "InPattern",
-                      "pattern": {},
+                      "pattern": {
+                        "typeName": "Pin"
+                      },
                       "body": {
                         "typeName": "True",
                         "expressionL": {
@@ -853,7 +925,39 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     },
                     {
                       "typeName": "InPattern",
-                      "pattern": {},
+                      "pattern": {
+                        "typeName": "MatchAs",
+                        "value": {
+                          "typeName": "MatchVar",
+                          "nameL": {
+                            "begin": 610,
+                            "end": 613
+                          },
+                          "expressionL": {
+                            "begin": 610,
+                            "end": 613
+                          }
+                        },
+                        "as": {
+                          "typeName": "MatchVar",
+                          "nameL": {
+                            "begin": 617,
+                            "end": 620
+                          },
+                          "expressionL": {
+                            "begin": 617,
+                            "end": 620
+                          }
+                        },
+                        "operatorL": {
+                          "begin": 614,
+                          "end": 616
+                        },
+                        "expressionL": {
+                          "begin": 610,
+                          "end": 620
+                        }
+                      },
                       "body": {
                         "typeName": "True",
                         "expressionL": {
@@ -879,9 +983,39 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                       "pattern": {
                         "typeName": "FindPattern",
                         "elements": [
-                          {},
-                          {},
-                          {}
+                          {
+                            "typeName": "MatchRest",
+                            "operatorL": {
+                              "begin": 641,
+                              "end": 642
+                            },
+                            "expressionL": {
+                              "begin": 641,
+                              "end": 642
+                            }
+                          },
+                          {
+                            "typeName": "MatchVar",
+                            "nameL": {
+                              "begin": 644,
+                              "end": 647
+                            },
+                            "expressionL": {
+                              "begin": 644,
+                              "end": 647
+                            }
+                          },
+                          {
+                            "typeName": "MatchRest",
+                            "operatorL": {
+                              "begin": 649,
+                              "end": 650
+                            },
+                            "expressionL": {
+                              "begin": 649,
+                              "end": 650
+                            }
+                          }
                         ],
                         "beginL": {
                           "begin": 640,
@@ -918,7 +1052,17 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     },
                     {
                       "typeName": "InPattern",
-                      "pattern": {},
+                      "pattern": {
+                        "typeName": "MatchVar",
+                        "nameL": {
+                          "begin": 680,
+                          "end": 683
+                        },
+                        "expressionL": {
+                          "begin": 680,
+                          "end": 683
+                        }
+                      },
                       "guard": {
                         "typeName": "IfGuard",
                         "cond": {
@@ -960,8 +1104,20 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     },
                     {
                       "typeName": "InPattern",
-                      "pattern": {},
-                      "guard": {},
+                      "pattern": {
+                        "typeName": "MatchVar",
+                        "nameL": {
+                          "begin": 714,
+                          "end": 717
+                        },
+                        "expressionL": {
+                          "begin": 714,
+                          "end": 717
+                        }
+                      },
+                      "guard": {
+                        "typeName": "UnlessGuard"
+                      },
                       "body": {
                         "typeName": "Nil",
                         "expressionL": {
@@ -984,7 +1140,39 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     },
                     {
                       "typeName": "InPattern",
-                      "pattern": {},
+                      "pattern": {
+                        "typeName": "MatchAlt",
+                        "lhs": {
+                          "typeName": "MatchVar",
+                          "nameL": {
+                            "begin": 752,
+                            "end": 755
+                          },
+                          "expressionL": {
+                            "begin": 752,
+                            "end": 755
+                          }
+                        },
+                        "rhs": {
+                          "typeName": "MatchVar",
+                          "nameL": {
+                            "begin": 758,
+                            "end": 761
+                          },
+                          "expressionL": {
+                            "begin": 758,
+                            "end": 761
+                          }
+                        },
+                        "operatorL": {
+                          "begin": 756,
+                          "end": 757
+                        },
+                        "expressionL": {
+                          "begin": 752,
+                          "end": 761
+                        }
+                      },
                       "body": {
                         "typeName": "Nil",
                         "expressionL": {
@@ -1010,7 +1198,21 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                       "pattern": {
                         "typeName": "HashPattern",
                         "elements": [
-                          {}
+                          {
+                            "typeName": "MatchNilPattern",
+                            "operatorL": {
+                              "begin": 790,
+                              "end": 792
+                            },
+                            "nameL": {
+                              "begin": 792,
+                              "end": 795
+                            },
+                            "expressionL": {
+                              "begin": 790,
+                              "end": 795
+                            }
+                          }
                         ],
                         "expressionL": {
                           "begin": 790,
@@ -1042,7 +1244,28 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                       "pattern": {
                         "typeName": "ArrayPattern",
                         "elements": [
-                          {}
+                          {
+                            "typeName": "MatchRest",
+                            "name": {
+                              "typeName": "MatchVar",
+                              "nameL": {
+                                "begin": 825,
+                                "end": 828
+                              },
+                              "expressionL": {
+                                "begin": 825,
+                                "end": 828
+                              }
+                            },
+                            "operatorL": {
+                              "begin": 824,
+                              "end": 825
+                            },
+                            "expressionL": {
+                              "begin": 824,
+                              "end": 828
+                            }
+                          }
                         ],
                         "expressionL": {
                           "begin": 824,
@@ -1107,7 +1330,17 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                   "inBodies": [
                     {
                       "typeName": "InPattern",
-                      "pattern": {},
+                      "pattern": {
+                        "typeName": "MatchVar",
+                        "nameL": {
+                          "begin": 908,
+                          "end": 911
+                        },
+                        "expressionL": {
+                          "begin": 908,
+                          "end": 911
+                        }
+                      },
                       "body": {
                         "typeName": "Nil",
                         "expressionL": {
@@ -1265,7 +1498,9 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     "end": 1032
                   }
                 },
-                {},
+                {
+                  "typeName": "Xstr"
+                },
                 {
                   "typeName": "Heredoc",
                   "parts": [],
@@ -1282,10 +1517,22 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     "end": 1059
                   }
                 },
-                {},
+                {
+                  "typeName": "XHeredoc"
+                },
                 {
                   "typeName": "For",
-                  "iterator": {},
+                  "iterator": {
+                    "typeName": "Lvasgn",
+                    "nameL": {
+                      "begin": 1110,
+                      "end": 1111
+                    },
+                    "expressionL": {
+                      "begin": 1110,
+                      "end": 1111
+                    }
+                  },
                   "iteratee": {
                     "typeName": "Array",
                     "elements": [
@@ -1389,7 +1636,9 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                   "args": {
                     "typeName": "Args",
                     "args": [
-                      {}
+                      {
+                        "typeName": "Shadowarg"
+                      }
                     ],
                     "expressionL": {
                       "begin": 1169,
@@ -1443,7 +1692,9 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                   "args": {
                     "typeName": "Args",
                     "args": [
-                      {}
+                      {
+                        "typeName": "Procarg0"
+                      }
                     ],
                     "expressionL": {
                       "begin": 1195,
@@ -1502,7 +1753,9 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                   "args": {
                     "typeName": "Args",
                     "args": [
-                      {}
+                      {
+                        "typeName": "Procarg0"
+                      }
                     ],
                     "expressionL": {
                       "begin": 1225,
@@ -1563,8 +1816,42 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                         "end": 1260
                       }
                     },
-                    {},
-                    {},
+                    {
+                      "typeName": "Splat"
+                    },
+                    {
+                      "typeName": "Kwargs",
+                      "pairs": [
+                        {
+                          "typeName": "Kwsplat",
+                          "value": {
+                            "typeName": "Send",
+                            "methodName": "baz",
+                            "args": [],
+                            "selectorL": {
+                              "begin": 1270,
+                              "end": 1273
+                            },
+                            "expressionL": {
+                              "begin": 1270,
+                              "end": 1273
+                            }
+                          },
+                          "operatorL": {
+                            "begin": 1268,
+                            "end": 1270
+                          },
+                          "expressionL": {
+                            "begin": 1268,
+                            "end": 1273
+                          }
+                        }
+                      ],
+                      "expressionL": {
+                        "begin": 1268,
+                        "end": 1273
+                      }
+                    },
                     {
                       "typeName": "BlockPass",
                       "value": {
@@ -1723,7 +2010,33 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                 {
                   "typeName": "Begin",
                   "statements": [
-                    {}
+                    {
+                      "typeName": "Irange",
+                      "left": {
+                        "typeName": "Lvar",
+                        "name": "foo",
+                        "expressionL": {
+                          "begin": 1345,
+                          "end": 1348
+                        }
+                      },
+                      "right": {
+                        "typeName": "Lvar",
+                        "name": "bar",
+                        "expressionL": {
+                          "begin": 1350,
+                          "end": 1353
+                        }
+                      },
+                      "operatorL": {
+                        "begin": 1348,
+                        "end": 1350
+                      },
+                      "expressionL": {
+                        "begin": 1345,
+                        "end": 1353
+                      }
+                    }
                   ],
                   "beginL": {
                     "begin": 1344,
@@ -1741,7 +2054,25 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                 {
                   "typeName": "Begin",
                   "statements": [
-                    {}
+                    {
+                      "typeName": "Irange",
+                      "left": {
+                        "typeName": "Lvar",
+                        "name": "foo",
+                        "expressionL": {
+                          "begin": 1362,
+                          "end": 1365
+                        }
+                      },
+                      "operatorL": {
+                        "begin": 1365,
+                        "end": 1367
+                      },
+                      "expressionL": {
+                        "begin": 1362,
+                        "end": 1367
+                      }
+                    }
                   ],
                   "beginL": {
                     "begin": 1361,
@@ -1759,7 +2090,25 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                 {
                   "typeName": "Begin",
                   "statements": [
-                    {}
+                    {
+                      "typeName": "Irange",
+                      "right": {
+                        "typeName": "Lvar",
+                        "name": "bar",
+                        "expressionL": {
+                          "begin": 1378,
+                          "end": 1381
+                        }
+                      },
+                      "operatorL": {
+                        "begin": 1376,
+                        "end": 1378
+                      },
+                      "expressionL": {
+                        "begin": 1376,
+                        "end": 1381
+                      }
+                    }
                   ],
                   "beginL": {
                     "begin": 1375,
@@ -1979,9 +2328,33 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                           "end": 1503
                         }
                       },
-                      {},
-                      {},
-                      {},
+                      {
+                        "typeName": "Next",
+                        "args": [
+                          {
+                            "typeName": "Int",
+                            "value": "42",
+                            "expressionL": {
+                              "begin": 1519,
+                              "end": 1521
+                            }
+                          }
+                        ],
+                        "keywordL": {
+                          "begin": 1514,
+                          "end": 1518
+                        },
+                        "expressionL": {
+                          "begin": 1514,
+                          "end": 1521
+                        }
+                      },
+                      {
+                        "typeName": "Redo"
+                      },
+                      {
+                        "typeName": "Retry"
+                      },
                       {
                         "typeName": "Super",
                         "args": [
@@ -2011,7 +2384,9 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                           "end": 1573
                         }
                       },
-                      {}
+                      {
+                        "typeName": "ZSuper"
+                      }
                     ],
                     "expressionL": {
                       "begin": 1455,
@@ -2211,12 +2586,88 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     "end": 1743
                   }
                 },
-                {},
+                {
+                  "typeName": "KwBegin",
+                  "statements": [
+                    {
+                      "typeName": "Ensure",
+                      "body": {
+                        "typeName": "Rescue",
+                        "body": {
+                          "typeName": "Lvar",
+                          "name": "foo",
+                          "expressionL": {
+                            "begin": 1767,
+                            "end": 1770
+                          }
+                        },
+                        "rescueBodies": [
+                          {
+                            "typeName": "RescueBody"
+                          }
+                        ],
+                        "else": {
+                          "typeName": "Send",
+                          "methodName": "baz",
+                          "args": [],
+                          "selectorL": {
+                            "begin": 1826,
+                            "end": 1829
+                          },
+                          "expressionL": {
+                            "begin": 1826,
+                            "end": 1829
+                          }
+                        },
+                        "elseL": {
+                          "begin": 1811,
+                          "end": 1815
+                        },
+                        "expressionL": {
+                          "begin": 1767,
+                          "end": 1829
+                        }
+                      },
+                      "ensure": {
+                        "typeName": "Lvar",
+                        "name": "foo",
+                        "expressionL": {
+                          "begin": 1853,
+                          "end": 1856
+                        }
+                      },
+                      "keywordL": {
+                        "begin": 1836,
+                        "end": 1842
+                      },
+                      "expressionL": {
+                        "begin": 1767,
+                        "end": 1856
+                      }
+                    }
+                  ],
+                  "beginL": {
+                    "begin": 1751,
+                    "end": 1756
+                  },
+                  "endL": {
+                    "begin": 1863,
+                    "end": 1866
+                  },
+                  "expressionL": {
+                    "begin": 1751,
+                    "end": 1866
+                  }
+                },
                 {
                   "typeName": "Hash",
                   "pairs": [
-                    {},
-                    {}
+                    {
+                      "typeName": "Pair"
+                    },
+                    {
+                      "typeName": "Pair"
+                    }
                   ],
                   "beginL": {
                     "begin": 1874,
@@ -2381,7 +2832,36 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     "end": 1998
                   }
                 },
-                {},
+                {
+                  "typeName": "MatchPatternP",
+                  "value": {
+                    "typeName": "Lvar",
+                    "name": "foo",
+                    "expressionL": {
+                      "begin": 2006,
+                      "end": 2009
+                    }
+                  },
+                  "pattern": {
+                    "typeName": "MatchVar",
+                    "nameL": {
+                      "begin": 2013,
+                      "end": 2016
+                    },
+                    "expressionL": {
+                      "begin": 2013,
+                      "end": 2016
+                    }
+                  },
+                  "operatorL": {
+                    "begin": 2010,
+                    "end": 2012
+                  },
+                  "expressionL": {
+                    "begin": 2006,
+                    "end": 2016
+                  }
+                },
                 {
                   "typeName": "Index",
                   "recv": {
@@ -2476,7 +2956,22 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     "end": 2053
                   }
                 },
-                {},
+                {
+                  "typeName": "KwBegin",
+                  "statements": [],
+                  "beginL": {
+                    "begin": 2061,
+                    "end": 2066
+                  },
+                  "endL": {
+                    "begin": 2073,
+                    "end": 2076
+                  },
+                  "expressionL": {
+                    "begin": 2061,
+                    "end": 2076
+                  }
+                },
                 {
                   "typeName": "Block",
                   "call": {
@@ -2515,10 +3010,101 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     "end": 2091
                   }
                 },
-                {},
+                {
+                  "typeName": "Masgn",
+                  "lhs": {
+                    "typeName": "Mlhs",
+                    "items": [
+                      {
+                        "typeName": "Lvasgn",
+                        "nameL": {
+                          "begin": 2100,
+                          "end": 2101
+                        },
+                        "expressionL": {
+                          "begin": 2100,
+                          "end": 2101
+                        }
+                      },
+                      {
+                        "typeName": "Lvasgn",
+                        "nameL": {
+                          "begin": 2103,
+                          "end": 2104
+                        },
+                        "expressionL": {
+                          "begin": 2103,
+                          "end": 2104
+                        }
+                      }
+                    ],
+                    "beginL": {
+                      "begin": 2099,
+                      "end": 2100
+                    },
+                    "endL": {
+                      "begin": 2104,
+                      "end": 2105
+                    },
+                    "expressionL": {
+                      "begin": 2099,
+                      "end": 2105
+                    }
+                  },
+                  "rhs": {
+                    "typeName": "Array",
+                    "elements": [
+                      {
+                        "typeName": "Lvar",
+                        "name": "c",
+                        "expressionL": {
+                          "begin": 2109,
+                          "end": 2110
+                        }
+                      },
+                      {
+                        "typeName": "Lvar",
+                        "name": "d",
+                        "expressionL": {
+                          "begin": 2112,
+                          "end": 2113
+                        }
+                      }
+                    ],
+                    "beginL": {
+                      "begin": 2108,
+                      "end": 2109
+                    },
+                    "endL": {
+                      "begin": 2113,
+                      "end": 2114
+                    },
+                    "expressionL": {
+                      "begin": 2108,
+                      "end": 2114
+                    }
+                  },
+                  "operatorL": {
+                    "begin": 2106,
+                    "end": 2107
+                  },
+                  "expressionL": {
+                    "begin": 2099,
+                    "end": 2114
+                  }
+                },
                 {
                   "typeName": "If",
-                  "cond": {},
+                  "cond": {
+                    "typeName": "MatchCurrentLine",
+                    "re": {
+                      "typeName": "Regexp"
+                    },
+                    "expressionL": {
+                      "begin": 2125,
+                      "end": 2130
+                    }
+                  },
                   "keywordL": {
                     "begin": 2122,
                     "end": 2124
@@ -2538,7 +3124,9 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                 },
                 {
                   "typeName": "Send",
-                  "recv": {},
+                  "recv": {
+                    "typeName": "Regexp"
+                  },
                   "methodName": "=~",
                   "args": [
                     {
@@ -2573,11 +3161,21 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     "end": 2172
                   }
                 },
-                {},
-                {},
-                {},
-                {},
-                {},
+                {
+                  "typeName": "Numblock"
+                },
+                {
+                  "typeName": "OpAsgn"
+                },
+                {
+                  "typeName": "Regexp"
+                },
+                {
+                  "typeName": "Until"
+                },
+                {
+                  "typeName": "UntilPost"
+                },
                 {
                   "typeName": "While",
                   "cond": {
@@ -2613,7 +3211,9 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     "end": 2359
                   }
                 },
-                {}
+                {
+                  "typeName": "WhilePost"
+                }
               ],
               "expressionL": {
                 "begin": 104,
