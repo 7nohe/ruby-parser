@@ -128,3 +128,17 @@
 - [ ] Xstr
 - [x] Yield
 - [ ] ZSuper
+
+## Development
+
+```bash
+yarn
+yarn build
+```
+
+To release a package:
+
+```bash
+npm version [major/minor/patch]
+git push --follow-tags
+```
