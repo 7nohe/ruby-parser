@@ -708,12 +708,24 @@ export interface Nil {
 }
 export interface NthRef {
   typeName: 'NthRef'
+  expressionL: Loc
 }
 export interface Numblock {
   typeName: 'Numblock'
+  call: RubyNode
+  numargs: number
+  body: RubyNode
+  beginL: Loc
+  endL: Loc
+  expressionL: Loc
 }
 export interface OpAsgn {
   typeName: 'OpAsgn'
+  recv: RubyNode
+  operator: string
+  value: RubyNode
+  operatorL: Loc
+  expressionL: Loc
 }
 export interface Optarg {
   typeName: 'Optarg'
@@ -732,12 +744,23 @@ export interface Or {
 }
 export interface OrAsgn {
   typeName: 'OrAsgn'
+  recv: NapiBox
+  value: NapiBox
+  operatorL: Loc
+  expressionL: Loc
 }
 export interface Pair {
   typeName: 'Pair'
+  key: NapiBox
+  value: NapiBox
+  operatorL: Loc
+  expressionL: Loc
 }
 export interface Pin {
   typeName: 'Pin'
+  var: NapiBox
+  selectorL: Loc
+  expressionL: Loc
 }
 export interface Postexe {
   typeName: 'Postexe'

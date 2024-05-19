@@ -1,4 +1,5 @@
 ## ruby-parser
+
 `ruby-parser` is a Ruby parser for Node.js written in Rust.
 
 ## Supported nodes
@@ -87,14 +88,14 @@
 - [x] Module
 - [x] Next
 - [x] Nil
-- [ ] NthRef
-- [ ] Numblock
-- [ ] OpAsgn
+- [x] NthRef
+- [x] Numblock
+- [x] OpAsgn
 - [x] Optarg
 - [x] Or
-- [ ] OrAsgn
-- [ ] Pair
-- [ ] Pin
+- [x] OrAsgn
+- [x] Pair
+- [x] Pin
 - [x] Postexe
 - [x] Preexe
 - [ ] Procarg0
@@ -108,7 +109,7 @@
 - [ ] Retry
 - [x] Return
 - [x] SClass
-- [x] Self_
+- [x] Self\_
 - [x] Send
 - [ ] Shadowarg
 - [ ] Splat

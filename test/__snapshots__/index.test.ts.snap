@@ -495,7 +495,11 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                   }
                 },
                 {
-                  "typeName": "NthRef"
+                  "typeName": "NthRef",
+                  "expressionL": {
+                    "begin": 329,
+                    "end": 331
+                  }
                 },
                 {
                   "typeName": "BackRef",
@@ -593,7 +597,34 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                   }
                 },
                 {
-                  "typeName": "OrAsgn"
+                  "typeName": "OrAsgn",
+                  "recv": {
+                    "typeName": "Lvasgn",
+                    "nameL": {
+                      "begin": 388,
+                      "end": 389
+                    },
+                    "expressionL": {
+                      "begin": 388,
+                      "end": 389
+                    }
+                  },
+                  "value": {
+                    "typeName": "Lvar",
+                    "name": "b",
+                    "expressionL": {
+                      "begin": 394,
+                      "end": 395
+                    }
+                  },
+                  "operatorL": {
+                    "begin": 390,
+                    "end": 393
+                  },
+                  "expressionL": {
+                    "begin": 388,
+                    "end": 395
+                  }
                 },
                 {
                   "typeName": "Or",
@@ -862,7 +893,40 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                         "typeName": "HashPattern",
                         "elements": [
                           {
-                            "typeName": "Pair"
+                            "typeName": "Pair",
+                            "key": {
+                              "typeName": "Sym",
+                              "name": {
+                                "raw": [
+                                  102,
+                                  111,
+                                  111
+                                ]
+                              },
+                              "expressionL": {
+                                "begin": 546,
+                                "end": 549
+                              }
+                            },
+                            "value": {
+                              "typeName": "MatchVar",
+                              "nameL": {
+                                "begin": 551,
+                                "end": 554
+                              },
+                              "expressionL": {
+                                "begin": 551,
+                                "end": 554
+                              }
+                            },
+                            "operatorL": {
+                              "begin": 549,
+                              "end": 550
+                            },
+                            "expressionL": {
+                              "begin": 546,
+                              "end": 554
+                            }
                           }
                         ],
                         "beginL": {
@@ -901,7 +965,23 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                     {
                       "typeName": "InPattern",
                       "pattern": {
-                        "typeName": "Pin"
+                        "typeName": "Pin",
+                        "var": {
+                          "typeName": "Lvar",
+                          "name": "foo",
+                          "expressionL": {
+                            "begin": 582,
+                            "end": 585
+                          }
+                        },
+                        "selectorL": {
+                          "begin": 581,
+                          "end": 582
+                        },
+                        "expressionL": {
+                          "begin": 581,
+                          "end": 585
+                        }
                       },
                       "body": {
                         "typeName": "True",
@@ -2663,10 +2743,82 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                   "typeName": "Hash",
                   "pairs": [
                     {
-                      "typeName": "Pair"
+                      "typeName": "Pair",
+                      "key": {
+                        "typeName": "Sym",
+                        "name": {
+                          "raw": [
+                            102,
+                            111,
+                            111
+                          ]
+                        },
+                        "beginL": {
+                          "begin": 1876,
+                          "end": 1877
+                        },
+                        "endL": {
+                          "begin": 1880,
+                          "end": 1881
+                        },
+                        "expressionL": {
+                          "begin": 1876,
+                          "end": 1881
+                        }
+                      },
+                      "value": {
+                        "typeName": "Lvar",
+                        "name": "bar",
+                        "expressionL": {
+                          "begin": 1883,
+                          "end": 1886
+                        }
+                      },
+                      "operatorL": {
+                        "begin": 1881,
+                        "end": 1882
+                      },
+                      "expressionL": {
+                        "begin": 1876,
+                        "end": 1886
+                      }
                     },
                     {
-                      "typeName": "Pair"
+                      "typeName": "Pair",
+                      "key": {
+                        "typeName": "Sym",
+                        "name": {
+                          "raw": [
+                            98,
+                            97,
+                            122
+                          ]
+                        },
+                        "beginL": {
+                          "begin": 1888,
+                          "end": 1889
+                        },
+                        "expressionL": {
+                          "begin": 1888,
+                          "end": 1892
+                        }
+                      },
+                      "value": {
+                        "typeName": "Lvar",
+                        "name": "foo",
+                        "expressionL": {
+                          "begin": 1896,
+                          "end": 1899
+                        }
+                      },
+                      "operatorL": {
+                        "begin": 1893,
+                        "end": 1895
+                      },
+                      "expressionL": {
+                        "begin": 1888,
+                        "end": 1899
+                      }
                     }
                   ],
                   "beginL": {
@@ -3162,10 +3314,72 @@ exports[`fixtures > should parse a simple ruby code 1`] = `
                   }
                 },
                 {
-                  "typeName": "Numblock"
+                  "typeName": "Numblock",
+                  "call": {
+                    "typeName": "Send",
+                    "methodName": "foo",
+                    "args": [],
+                    "selectorL": {
+                      "begin": 2180,
+                      "end": 2183
+                    },
+                    "expressionL": {
+                      "begin": 2180,
+                      "end": 2183
+                    }
+                  },
+                  "numargs": 1,
+                  "body": {
+                    "typeName": "Lvar",
+                    "name": "_1",
+                    "expressionL": {
+                      "begin": 2186,
+                      "end": 2188
+                    }
+                  },
+                  "beginL": {
+                    "begin": 2184,
+                    "end": 2185
+                  },
+                  "endL": {
+                    "begin": 2189,
+                    "end": 2190
+                  },
+                  "expressionL": {
+                    "begin": 2180,
+                    "end": 2190
+                  }
                 },
                 {
-                  "typeName": "OpAsgn"
+                  "typeName": "OpAsgn",
+                  "recv": {
+                    "typeName": "Lvasgn",
+                    "nameL": {
+                      "begin": 2198,
+                      "end": 2201
+                    },
+                    "expressionL": {
+                      "begin": 2198,
+                      "end": 2201
+                    }
+                  },
+                  "operator": "+",
+                  "value": {
+                    "typeName": "Lvar",
+                    "name": "bar",
+                    "expressionL": {
+                      "begin": 2205,
+                      "end": 2208
+                    }
+                  },
+                  "operatorL": {
+                    "begin": 2202,
+                    "end": 2204
+                  },
+                  "expressionL": {
+                    "begin": 2198,
+                    "end": 2208
+                  }
                 },
                 {
                   "typeName": "Regexp"
